@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Others
+.vs/*
+__vm/*
+*.vc*
+*.sln
+Debug/*
+Release/*
