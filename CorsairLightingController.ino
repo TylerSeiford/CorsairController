@@ -8,9 +8,9 @@
 
 constexpr uint8_t CHANNEL_1_PIN = 2;
 constexpr uint8_t CHANNEL_2_PIN = 3;
-constexpr uint8_t RED_PIN = 5;
-constexpr uint8_t GREEN_PIN = 6;
-constexpr uint8_t BLUE_PIN = 9;
+constexpr uint8_t RED_PIN = 6;
+constexpr uint8_t GREEN_PIN = 9;
+constexpr uint8_t BLUE_PIN = 10;
 
 LightingNodePro* lnp;
 
