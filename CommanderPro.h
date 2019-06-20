@@ -28,6 +28,14 @@ public:
 	CommanderPro(bool useEEPROM, uint8_t fanUpdateRate);
 
 	/*
+	 * Adds a fan to the commander pro
+	 * 
+	 * @param index location of fan to add
+	 * @param fan Fan to add
+	 */
+	void addFan(uint8_t index, IFan* fan);
+
+	/*
 	 * Reads latest data, translates it to LED colors, and updates buffers
 	 *
 	 * @return True if there is a change to the LEDs, False if there is no change
