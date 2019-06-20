@@ -23,5 +23,6 @@ bool CommanderPro::update() {
 		clp->getCommand(cmd);
 		clp->handleCommand(cmd);
 	}
+	fanController->updateFans();
 	return ledController->updateLEDs();
 }
