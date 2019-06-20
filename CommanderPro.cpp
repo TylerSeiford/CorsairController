@@ -13,6 +13,10 @@ CommanderPro::CommanderPro(bool useEEPROM, uint8_t fanUpdateRate) {
 	clp->begin();
 }
 
+void CommanderPro::addFan(uint8_t index, IFan* fan) {
+	fanController->addFan(index, fan);
+}
+
 bool CommanderPro::update() {
 	if (clp->available())
 	{
