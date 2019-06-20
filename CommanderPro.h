@@ -2,16 +2,31 @@
 
 #include <CorsairLightingProtocol.h>
 #include <LEDController.h>
+#include "FakeTemperatureController.h"
+#include "SimpleFanController.h"
 #include <FastLED.h>
 
 constexpr uint8_t LEDS_PER_CHANNEL = 10;
+constexpr uint8_t DEFAULT_FAN_UPDATE_RATE = 500;
 
-class LightingNodePro {
+class CommanderPro {
 public:
 	/*
-	 * Creates a lighting node pro
+	 * Creates a commander pro
+	 * 
+	 * @param useEEPROM use EEPROM to save settings
+	 * Uses default fan update rate
 	 */
-	LightingNodePro(bool useEEPROM);
+	CommanderPro(bool useEEPROM);
+
+	/*
+	 * Creates a commander pro
+	 * 
+	 * @param useEEPROM use EEPROM to save settings
+	 * @param fanUpdateRate update rate to change fans
+	 */
+	CommanderPro(bool useEEPROM, uint8_t fanUpdateRate);
+
 	/*
 	 * Reads latest data, translates it to LED colors, and updates buffers
 	 *
@@ -23,6 +38,8 @@ public:
 	CRGB channel2[LEDS_PER_CHANNEL];
 private:
 	Command cmd;
-	CorsairLightingProtocol* clp;
 	LEDController<LEDS_PER_CHANNEL>* ledController;
+	FakeTemperatureController* tempController;
+	SimpleFanController* fanController;
+	CorsairLightingProtocol* clp;
 };
