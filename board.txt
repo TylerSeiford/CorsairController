@@ -1,10 +1,10 @@
-# build properties for CommanderPRO
+# build properties for Commander PRO
 #
 
 ##############################################################
 
 build.vid=0x1b1c
-build.pid=0x0c0b
+build.pid=0x0c10
 build.usb_product="Commander PRO"
 build.usb_manufacturer="Corsair"
 
