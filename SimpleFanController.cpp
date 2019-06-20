@@ -6,7 +6,7 @@ SimpleFanController::SimpleFanController(TemperatureController* temperatureContr
 	load();
 }
 
-void SimpleFanController::addFan(uint8_t index, PWMFan* fan)
+void SimpleFanController::addFan(uint8_t index, IFan* fan)
 {
 	if (index >= FAN_NUM) {
 		return;
