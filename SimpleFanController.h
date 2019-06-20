@@ -3,7 +3,7 @@
 #include "Arduino.h"
 #include "FanController.h"
 #include "TemperatureController.h"
-#include "PWMFan.h"
+#include "IFan.h"
 
 #define FAN_CONTROL_MODE_FIXED_POWER 0
 #define FAN_CONTROL_MODE_FIXED_RPM 1
@@ -25,7 +25,7 @@ public:
 	// Fan Contorller must use the EEPROM else on startup the fans can't be controlled
 	// updateRate it the time between fan speed updates in ms
 	SimpleFanController(TemperatureController* temperatureController, uint16_t updateRate, uint16_t eEPROMAdress);
-	void addFan(uint8_t index, PWMFan* fan);
+	void addFan(uint8_t index, IFan* fan);
 	virtual bool updateFans();
 protected:
 	virtual uint16_t getFanSpeed(uint8_t fan) override;
@@ -41,7 +41,7 @@ protected:
 	bool save();
 
 	TemperatureController* const temperatureController;
-	PWMFan* fans[FAN_NUM] = { NULL };
+	IFan* fans[FAN_NUM] = { NULL };
 	bool force3PinMode = false;
 	FanData fanData[FAN_NUM];
 	uint16_t externalTemp[FAN_NUM];
