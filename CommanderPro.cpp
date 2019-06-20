@@ -1,7 +1,5 @@
 #include "CommanderPro.h"
 
-CommanderPro::CommanderPro(bool useEEPROM) : CommanderPro(useEEPROM, FAN_UPDATE_RATE) {}
-
 CommanderPro::CommanderPro(bool useEEPROM, uint8_t fanUpdateRate) {
 	ledController = new LEDController<LEDS_PER_CHANNEL>(useEEPROM);
 	tempController = new FakeTemperatureController();

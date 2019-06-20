@@ -17,7 +17,7 @@ public:
 	 * @param useEEPROM use EEPROM to save settings
 	 * Uses default fan update rate
 	 */
-	CommanderPro(bool useEEPROM);
+	CommanderPro(bool useEEPROM) : CommanderPro(useEEPROM, DEFAULT_FAN_UPDATE_RATE) {}
 
 	/*
 	 * Creates a commander pro
