@@ -4,6 +4,9 @@
  Author:	Tyler
 */
 
+#include "FakeTemperatureController.h"
+#include "PWMFan.h"
+#include "SimpleFanController.h"
 #include <LEDController.h>
 #include "CommanderPro.h"
 
@@ -13,10 +16,10 @@ constexpr uint8_t RED_PIN = 6;
 constexpr uint8_t GREEN_PIN = 9;
 constexpr uint8_t BLUE_PIN = 10;
 
-LightingNodePro* lnp;
+CommanderPro* lnp;
 
 void setup() {
-	lnp = new LightingNodePro(true);
+	lnp = new CommanderPro(true);
 	FastLED.addLeds<TM1803, CHANNEL_2_PIN, GBR>(lnp->channel2, LEDS_PER_CHANNEL);
 	FastLED.addLeds<TM1803, CHANNEL_1_PIN, GBR>(lnp->channel1, LEDS_PER_CHANNEL);
 
