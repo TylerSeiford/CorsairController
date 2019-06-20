@@ -14,7 +14,7 @@ public:
 	LightingNodePro(bool useEEPROM);
 	/*
 	 * Reads latest data, translates it to LED colors, and updates buffers
-	 * 
+	 *
 	 * @return True if there is a change to the LEDs, False if there is no change
 	 */
 	bool update();
