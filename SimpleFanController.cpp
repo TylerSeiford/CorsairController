@@ -22,7 +22,7 @@ void SimpleFanController::addFan(uint8_t index, IFan* fan)
 		break;
 	}
 
-	fanData[index].detectionType = fan->type;
+	fanData[index].detectionType = fan->getType();
 }
 
 bool SimpleFanController::updateFans()
