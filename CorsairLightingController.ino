@@ -7,6 +7,8 @@
 #include "CommanderPro.h"
 #include "PWMFan.h"
 
+constexpr uint8_t LEDS_PER_CHANNEL = 10;
+
 constexpr uint8_t CHANNEL_1_PIN = 7;
 constexpr uint8_t CHANNEL_2_PIN = 8;
 
@@ -16,10 +18,10 @@ constexpr uint8_t BLUE_PIN = 10;
 
 constexpr uint8_t FAN_PIN = 5;
 
-CommanderPro* cp;
+CommanderPro<LEDS_PER_CHANNEL>* cp;
 
 void setup() {
-	cp = new CommanderPro(true);
+	cp = new CommanderPro<LEDS_PER_CHANNEL>(true);
 
 	FastLED.addLeds<TM1803, CHANNEL_2_PIN, GBR>(cp->channel2, LEDS_PER_CHANNEL);
 	FastLED.addLeds<TM1803, CHANNEL_1_PIN, GBR>(cp->channel1, LEDS_PER_CHANNEL);

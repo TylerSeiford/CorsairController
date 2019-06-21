@@ -6,9 +6,9 @@
 #include "SimpleFanController.h"
 #include <FastLED.h>
 
-constexpr uint8_t LEDS_PER_CHANNEL = 10;
 constexpr uint8_t DEFAULT_FAN_UPDATE_RATE = 500;
 
+template <size_t CHANNEL_LED_COUNT>
 class CommanderPro {
 public:
 	/*
@@ -17,7 +17,7 @@ public:
 	 * @param useEEPROM use EEPROM to save settings
 	 * Uses default fan update rate
 	 */
-	CommanderPro(bool useEEPROM) : CommanderPro(useEEPROM, DEFAULT_FAN_UPDATE_RATE) {}
+	CommanderPro(bool useEEPROM);
 
 	/*
 	 * Creates a commander pro
@@ -33,20 +33,20 @@ public:
 	 * @param index location of fan to add
 	 * @param fan Fan to add
 	 */
-	void addFan(uint8_t index, IFan* fan);
+	virtual void addFan(uint8_t index, IFan* fan);
 
 	/*
 	 * Reads latest data, translates it to LED colors, and updates buffers
 	 *
 	 * @return True if there is a change to the LEDs, False if there is no change
 	 */
-	bool update();
+	virtual bool update();
 
-	CRGB channel1[LEDS_PER_CHANNEL];
-	CRGB channel2[LEDS_PER_CHANNEL];
+	CRGB channel1[CHANNEL_LED_COUNT];
+	CRGB channel2[CHANNEL_LED_COUNT];
 private:
 	Command cmd;
-	LEDController<LEDS_PER_CHANNEL>* ledController;
+	LEDController<CHANNEL_LED_COUNT>* ledController;
 	FakeTemperatureController* tempController;
 	SimpleFanController* fanController;
 	CorsairLightingProtocol* clp;
