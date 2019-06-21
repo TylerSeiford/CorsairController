@@ -4,11 +4,8 @@
  Author:	Tyler
 */
 
-#include "FakeTemperatureController.h"
-#include "PWMFan.h"
-#include "SimpleFanController.h"
-#include <LEDController.h>
 #include "CommanderPro.h"
+#include "PWMFan.h"
 
 constexpr uint8_t CHANNEL_1_PIN = 7;
 constexpr uint8_t CHANNEL_2_PIN = 8;
