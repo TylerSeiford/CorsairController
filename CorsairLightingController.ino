@@ -4,8 +4,9 @@
  Author:	Tyler
 */
 
+#include "DCFan.h"
 #include "CommanderPro.h"
-#include "PWMFan.h"
+#include "DCFan.h"
 
 constexpr uint8_t LEDS_PER_CHANNEL = 10;
 
@@ -30,7 +31,7 @@ void setup() {
 	pinMode(GREEN_PIN, OUTPUT);
 	pinMode(BLUE_PIN, OUTPUT);
 
-	cp->addFan(0, new PWMFan(FAN_PIN, 0, 950));
+	cp->addFan(0, new DCFan(FAN_PIN, 0, 950));
 }
 
 void loop() {
