@@ -10,14 +10,19 @@
 
 constexpr uint8_t LEDS_PER_CHANNEL = 10;
 
-constexpr uint8_t CHANNEL_1_PIN = 7;
+constexpr uint8_t FAN_1_TACH = 2;
+constexpr uint8_t FAN_1_PIN = 3;
+
+constexpr uint8_t FAN_2_PIN = 5;
+constexpr uint8_t FAN_2_TACH = 7;
+
+constexpr uint8_t CHANNEL_1_PIN = 4;
 constexpr uint8_t CHANNEL_2_PIN = 8;
 
 constexpr uint8_t RED_PIN = 6;
 constexpr uint8_t GREEN_PIN = 9;
 constexpr uint8_t BLUE_PIN = 10;
 
-constexpr uint8_t FAN_PIN = 5;
 
 CommanderPro<LEDS_PER_CHANNEL>* cp;
 
@@ -31,7 +36,8 @@ void setup() {
 	pinMode(GREEN_PIN, OUTPUT);
 	pinMode(BLUE_PIN, OUTPUT);
 
-	cp->addFan(0, new DCFan(FAN_PIN, 0, 950));
+	//cp->addFan(0, new DCFan(FAN_1_PIN, 0, 950));
+	//cp->addFan(1, new DCFan(FAN_2_PIN, 0, 950));
 }
 
 void loop() {
