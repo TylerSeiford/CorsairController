@@ -38,3 +38,6 @@ __vm/*
 *.sln
 Debug/*
 Release/*
+Kicad/fp-info-cache
+Kicad/fp-lib-table
+Kicad/sym-lib-table
