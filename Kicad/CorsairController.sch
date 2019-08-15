@@ -611,7 +611,7 @@ F 3 "~" H 3600 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H2
+L Connector:Conn_01x01_Female H2
 U 1 1 5D5374A4
 P 1500 3500
 F 0 "H2" H 1600 3546 50  0000 L CNN
@@ -622,7 +622,7 @@ F 3 "~" H 1500 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H3
+L Connector:Conn_01x01_Female H3
 U 1 1 5D537E45
 P 1500 4000
 F 0 "H3" H 1600 4046 50  0000 L CNN
@@ -633,7 +633,7 @@ F 3 "~" H 1500 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H4
+L Connector:Conn_01x01_Female H4
 U 1 1 5D5380F2
 P 1500 4500
 F 0 "H4" H 1600 4546 50  0000 L CNN
@@ -644,7 +644,7 @@ F 3 "~" H 1500 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H1
+L Connector:Conn_01x01_Female H1
 U 1 1 5D538581
 P 1500 3000
 F 0 "H1" H 1600 3046 50  0000 L CNN
@@ -706,6 +706,27 @@ Wire Wire Line
 Connection ~ 4250 6000
 NoConn ~ 3800 6200
 NoConn ~ 3800 6650
+Text Label 3850 6550 0    50   ~ 0
+A2
+Text Label 3850 6100 0    50   ~ 0
+A1
+Wire Wire Line
+	1300 4500 1300 4000
+Wire Wire Line
+	1300 3500 1300 4000
+Connection ~ 1300 4000
+Wire Wire Line
+	1300 3500 1300 3000
+Connection ~ 1300 3500
+Entry Wire Line
+	4050 2700 4150 2800
+Wire Wire Line
+	4050 2700 1300 2700
+Wire Wire Line
+	1300 2700 1300 3000
+Connection ~ 1300 3000
+Text Label 2250 2700 0    50   ~ 0
+GND
 Wire Wire Line
 	3800 3300 5950 3300
 Wire Bus Line
@@ -734,8 +755,4 @@ Wire Bus Line
 	4150 2150 7850 2150
 Wire Bus Line
 	4150 2150 4150 6850
-Text Label 3850 6550 0    50   ~ 0
-A2
-Text Label 3850 6100 0    50   ~ 0
-A1
 $EndSCHEMATC
