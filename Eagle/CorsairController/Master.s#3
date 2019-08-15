@@ -936,9 +936,9 @@ grid 2.54 mm</description>
 <part name="FAN1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="/90" package3d_urn="urn:adsk.eagle:package:22459/2"/>
 <part name="FAN2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="/90" package3d_urn="urn:adsk.eagle:package:22459/2"/>
 <part name="UART" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X5" device="/90" package3d_urn="urn:adsk.eagle:package:22467/2"/>
-<part name="POWER" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
 <part name="ARGB1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="/90" package3d_urn="urn:adsk.eagle:package:22459/2"/>
 <part name="ARGB2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="/90" package3d_urn="urn:adsk.eagle:package:22459/2"/>
+<part name="POWER" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="/90" package3d_urn="urn:adsk.eagle:package:22459/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -984,10 +984,6 @@ grid 2.54 mm</description>
 <attribute name="NAME" x="28.575" y="92.71" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="10.16" y="92.71" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="POWER" gate="A" x="40.64" y="86.36" smashed="yes" rot="R270">
-<attribute name="NAME" x="46.355" y="92.71" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="33.02" y="92.71" size="1.778" layer="96" rot="R270"/>
-</instance>
 <instance part="ARGB1" gate="A" x="-30.48" y="17.78" smashed="yes">
 <attribute name="NAME" x="-36.83" y="23.495" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-36.83" y="10.16" size="1.778" layer="96"/>
@@ -995,6 +991,10 @@ grid 2.54 mm</description>
 <instance part="ARGB2" gate="A" x="-30.48" y="2.54" smashed="yes">
 <attribute name="NAME" x="-36.83" y="8.255" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-36.83" y="-5.08" size="1.778" layer="96"/>
+</instance>
+<instance part="POWER" gate="A" x="40.64" y="86.36" smashed="yes" rot="R270">
+<attribute name="NAME" x="46.355" y="92.71" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="33.02" y="92.71" size="1.778" layer="96" rot="R270"/>
 </instance>
 </instances>
 <busses>
@@ -1024,8 +1024,6 @@ grid 2.54 mm</description>
 <wire x1="15.24" y1="88.9" x2="15.24" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="78.74" x2="2.54" y2="78.74" width="0.1524" layer="91"/>
 <junction x="2.54" y="78.74"/>
-<pinref part="POWER" gate="A" pin="3"/>
-<wire x1="38.1" y1="88.9" x2="38.1" y2="78.74" width="0.1524" layer="91"/>
 <junction x="15.24" y="78.74"/>
 <label x="30.48" y="78.74" size="1.778" layer="95"/>
 <pinref part="ARGB2" gate="A" pin="3"/>
@@ -1044,6 +1042,8 @@ grid 2.54 mm</description>
 <wire x1="33.02" y1="53.34" x2="25.4" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="53.34" x2="25.4" y2="78.74" width="0.1524" layer="91"/>
 <junction x="25.4" y="78.74"/>
+<pinref part="POWER" gate="A" pin="3"/>
+<wire x1="38.1" y1="78.74" x2="38.1" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="F2-5V" class="0">
@@ -1137,8 +1137,6 @@ grid 2.54 mm</description>
 <wire x1="-25.4" y1="71.12" x2="-25.4" y2="55.88" width="0.1524" layer="91"/>
 <junction x="-25.4" y="55.88"/>
 <label x="-25.4" y="50.8" size="1.778" layer="95" rot="R270"/>
-<pinref part="POWER" gate="A" pin="1"/>
-<wire x1="43.18" y1="88.9" x2="43.18" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="UART" gate="A" pin="1"/>
 <wire x1="43.18" y1="81.28" x2="25.4" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="81.28" x2="25.4" y2="88.9" width="0.1524" layer="91"/>
@@ -1155,6 +1153,8 @@ grid 2.54 mm</description>
 <wire x1="-33.02" y1="5.08" x2="-25.4" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="5.08" x2="-25.4" y2="20.32" width="0.1524" layer="91"/>
 <junction x="-25.4" y="20.32"/>
+<pinref part="POWER" gate="A" pin="1"/>
+<wire x1="43.18" y1="81.28" x2="43.18" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="F2-12V" class="0">
@@ -1176,10 +1176,10 @@ grid 2.54 mm</description>
 <net name="RX" class="0">
 <segment>
 <pinref part="UART" gate="A" pin="4"/>
-<pinref part="MASTER" gate="G$1" pin="RXI"/>
 <wire x1="17.78" y1="88.9" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="58.42" x2="33.02" y2="58.42" width="0.1524" layer="91"/>
 <label x="22.86" y="58.42" size="1.778" layer="95"/>
+<pinref part="MASTER" gate="G$1" pin="RXI"/>
+<wire x1="33.02" y1="58.42" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -1193,12 +1193,12 @@ grid 2.54 mm</description>
 </net>
 <net name="5V" class="0">
 <segment>
-<pinref part="POWER" gate="A" pin="2"/>
-<wire x1="40.64" y1="88.9" x2="40.64" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="76.2" x2="22.86" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="UART" gate="A" pin="2"/>
 <wire x1="22.86" y1="76.2" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
 <label x="30.48" y="76.2" size="1.778" layer="95"/>
+<pinref part="POWER" gate="A" pin="2"/>
+<wire x1="40.64" y1="76.2" x2="40.64" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ARGB2" class="0">
