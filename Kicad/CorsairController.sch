@@ -61,21 +61,21 @@ $EndComp
 $Comp
 L Connector:Conn_01x04_Male J-F1
 U 1 1 5D3AE865
-P 3600 3100
-F 0 "J-F1" H 3500 2950 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 3250 3050 50  0000 C CNN
-F 2 "footprints:FanPinHeader_1x04_P2.54mm_Vertical" H 3600 3100 50  0001 C CNN
-F 3 "~" H 3600 3100 50  0001 C CNN
-	1    3600 3100
+P 3600 3400
+F 0 "J-F1" H 3500 3250 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 3250 3350 50  0000 C CNN
+F 2 "footprints:FanPinHeader_1x04_P2.54mm_Vertical" H 3600 3400 50  0001 C CNN
+F 3 "~" H 3600 3400 50  0001 C CNN
+	1    3600 3400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3800 4500 4050 4500
 Text Label 3850 4500 0    50   ~ 0
 12V
-Text Label 3850 4050 0    50   ~ 0
+Text Label 3850 4250 0    50   ~ 0
 12V
-Text Label 3850 3200 0    50   ~ 0
+Text Label 3850 3400 0    50   ~ 0
 12V
 Text Label 6200 2150 0    50   ~ 0
 POWER_BUS
@@ -337,20 +337,18 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x04_Male J-F2
 U 1 1 5D3AAAFE
-P 3600 3950
-F 0 "J-F2" H 3500 3800 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 3250 3900 50  0000 C CNN
-F 2 "footprints:FanPinHeader_1x04_P2.54mm_Vertical" H 3600 3950 50  0001 C CNN
-F 3 "~" H 3600 3950 50  0001 C CNN
-	1    3600 3950
+P 3600 4250
+F 0 "J-F2" H 3500 4100 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 3250 4200 50  0000 C CNN
+F 2 "footprints:FanPinHeader_1x04_P2.54mm_Vertical" H 3600 4250 50  0001 C CNN
+F 3 "~" H 3600 4250 50  0001 C CNN
+	1    3600 4250
 	1    0    0    -1  
 $EndComp
 Text Label 4500 4150 0    50   ~ 0
 F2-GND
-Wire Wire Line
-	3800 4050 4050 4050
 Entry Wire Line
-	4050 4050 4150 4150
+	4050 4250 4150 4350
 Wire Wire Line
 	5450 4800 3800 4800
 Wire Bus Line
@@ -369,25 +367,23 @@ GND
 Text Label 7300 3850 0    50   ~ 0
 GND
 Wire Wire Line
-	3800 3000 4850 3000
+	3800 3600 4850 3600
 Wire Wire Line
-	3800 3200 4050 3200
+	3800 3400 4050 3400
 Entry Wire Line
-	4050 3200 4150 3300
-Wire Wire Line
-	3800 3100 4850 3100
-Text Label 3850 3100 0    50   ~ 0
+	4050 3400 4150 3500
+Text Label 3850 3500 0    50   ~ 0
 F1-T
-Text Label 3850 3000 0    50   ~ 0
+Text Label 3850 3600 0    50   ~ 0
 F1-5V
-Text Label 3850 3950 0    50   ~ 0
+Text Label 4850 4250 0    50   ~ 0
 F2-T
-Text Label 3850 3850 0    50   ~ 0
+Text Label 4850 4350 0    50   ~ 0
 F2-5V
 Entry Wire Line
-	4850 3000 4950 3100
+	4850 3600 4950 3700
 Entry Wire Line
-	4850 3100 4950 3200
+	4850 3500 4950 3600
 Text Label 4500 3300 0    50   ~ 0
 F1-GND
 Wire Wire Line
@@ -573,13 +569,9 @@ Wire Wire Line
 Wire Wire Line
 	9250 3150 9700 3150
 Entry Wire Line
-	4850 3950 4950 4050
+	4850 4350 4950 4450
 Entry Wire Line
-	4850 3850 4950 3950
-Wire Wire Line
-	3800 3850 4850 3850
-Wire Wire Line
-	3800 3950 4850 3950
+	4850 4250 4950 4350
 Entry Wire Line
 	7750 2050 7850 2150
 Entry Wire Line
@@ -729,10 +721,24 @@ Text Label 2250 2700 0    50   ~ 0
 GND
 Wire Wire Line
 	3800 3300 5950 3300
-Wire Bus Line
-	7850 2150 7850 3950
 Wire Wire Line
 	3800 4150 5950 4150
+Wire Wire Line
+	3800 4450 4850 4450
+Wire Wire Line
+	4850 4450 4850 4350
+Wire Wire Line
+	3800 4250 4050 4250
+Wire Wire Line
+	4850 4250 3800 4350
+Wire Wire Line
+	3800 6550 4250 6550
+Wire Wire Line
+	3800 6100 4350 6100
+Wire Wire Line
+	3800 3500 4850 3500
+Wire Bus Line
+	7850 2150 7850 3950
 Wire Bus Line
 	7700 2800 7700 4150
 Wire Wire Line
@@ -743,12 +749,8 @@ Wire Wire Line
 	3800 5100 4350 5100
 Wire Wire Line
 	3800 4600 5650 4600
-Wire Wire Line
-	3800 6100 4350 6100
-Wire Wire Line
-	3800 6550 4250 6550
 Wire Bus Line
-	4950 2800 4950 4050
+	4950 2800 4950 4450
 Wire Bus Line
 	8550 2800 8550 3850
 Wire Bus Line
