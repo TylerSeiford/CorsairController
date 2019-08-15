@@ -4,7 +4,6 @@
  Author:	Tyler
 */
 
-#include "DCFan.h"
 #include "CommanderPro.h"
 #include "DCFan.h"
 

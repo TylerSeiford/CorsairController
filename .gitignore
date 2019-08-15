@@ -41,3 +41,13 @@ Release/*
 Kicad/fp-info-cache
 Kicad/fp-lib-table
 Kicad/sym-lib-table
+Kicad/GERBER/CorsairController-B_Cu.gbr
+Kicad/GERBER/CorsairController-B_Mask.gbr
+Kicad/GERBER/CorsairController-B_SilkS.gbr
+Kicad/GERBER/CorsairController-Edge_Cuts.gbr
+Kicad/GERBER/CorsairController-F_Cu.gbr
+Kicad/GERBER/CorsairController-F_Mask.gbr
+Kicad/GERBER/CorsairController-F_SilkS.gbr
+Kicad/GERBER/CorsairController-NPTH.drl
+Kicad/GERBER/CorsairController-PTH.drl
+Kicad/GERBER/GERBER.zip
