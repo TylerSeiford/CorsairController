@@ -5,38 +5,39 @@
 */
 
 #include "CommanderPro.h"
-#include "DCFan.h"
+#include "Config.h"
 
-constexpr uint8_t LEDS_PER_CHANNEL = 10;
+//Hardware pin definitions
+constexpr uint8_t FAN_1_PWM = 5;
+constexpr uint8_t FAN_1_TACH = 7;
 
-constexpr uint8_t FAN_1_TACH = 2;
-constexpr uint8_t FAN_1_PIN = 3;
+constexpr uint8_t FAN_2_PWM = 3;
+constexpr uint8_t FAN_2_TACH = 2;
 
-constexpr uint8_t FAN_2_PIN = 5;
-constexpr uint8_t FAN_2_TACH = 7;
+constexpr uint8_t CHANNEL_1 = 4;
+constexpr uint8_t CHANNEL_2 = 8;
 
-constexpr uint8_t CHANNEL_1_PIN = 4;
-constexpr uint8_t CHANNEL_2_PIN = 8;
-
-constexpr uint8_t RED_PIN = 6;
-constexpr uint8_t GREEN_PIN = 9;
-constexpr uint8_t BLUE_PIN = 10;
+constexpr uint8_t RGB_1 = 6;
+constexpr uint8_t RGB_2 = 9;
+constexpr uint8_t RGB_3 = 10;
 
 
 CommanderPro<LEDS_PER_CHANNEL>* cp;
 
 void setup() {
+	disableBuildInLEDs();
+
 	cp = new CommanderPro<LEDS_PER_CHANNEL>(true);
 
-	FastLED.addLeds<TM1803, CHANNEL_2_PIN, GBR>(cp->channel2, LEDS_PER_CHANNEL);
-	FastLED.addLeds<TM1803, CHANNEL_1_PIN, GBR>(cp->channel1, LEDS_PER_CHANNEL);
+	FastLED.addLeds<LED_CHIPSET_1, CHANNEL_2, LED_ORDER_1>(cp->channel2, LEDS_PER_CHANNEL);
+	FastLED.addLeds<LED_CHIPSET_2, CHANNEL_1, LED_ORDER_2>(cp->channel1, LEDS_PER_CHANNEL);
 
-	pinMode(RED_PIN, OUTPUT);
-	pinMode(GREEN_PIN, OUTPUT);
-	pinMode(BLUE_PIN, OUTPUT);
+	pinMode(RGB_1, OUTPUT);
+	pinMode(RGB_2, OUTPUT);
+	pinMode(RGB_3, OUTPUT);
 
-	//cp->addFan(0, new DCFan(FAN_1_PIN, 0, 950));
-	//cp->addFan(1, new DCFan(FAN_2_PIN, 0, 950));
+	cp->addFan(0, new DCFan(FAN_1_PWM, 0, 950));
+	cp->addFan(1, new PWMFan(FAN_2_PWM, 0, 1500));
 }
 
 void loop() {

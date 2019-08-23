@@ -1,12 +1,15 @@
 #pragma once
 
+#include <FastLEDController.h>
 #include <CorsairLightingProtocol.h>
-#include <LEDController.h>
+#include <CorsairLightingProtocolHID.h>
 #include "FakeTemperatureController.h"
 #include "SimpleFanController.h"
-#include <FastLED.h>
+#include "DCFan.h"
+#include "PWMFan.h"
 
 constexpr uint8_t DEFAULT_FAN_UPDATE_RATE = 500;
+constexpr uint8_t DEFAULT_FIRMWARE_VERSION[FIRMWARE_VERSION_SIZE] PROGMEM = { 0x00, 0x08, 0x00 };
 
 template <size_t CHANNEL_LED_COUNT>
 class CommanderPro {
@@ -46,39 +49,29 @@ public:
 	CRGB channel2[CHANNEL_LED_COUNT];
 private:
 	Command cmd;
-	LEDController<CHANNEL_LED_COUNT>* ledController;
+	FastLEDController<CHANNEL_LED_COUNT>* ledController;
 	FakeTemperatureController* tempController;
 	SimpleFanController* fanController;
 	CorsairLightingProtocol* clp;
+	CorsairLightingProtocolHID* cHID;
 };
 
 template<size_t CHANNEL_LED_COUNT>
-CommanderPro<CHANNEL_LED_COUNT>::CommanderPro(bool useEEPROM) {
-	ledController = new LEDController<CHANNEL_LED_COUNT>(useEEPROM);
-	tempController = new FakeTemperatureController();
-	fanController = new SimpleFanController(tempController, DEFAULT_FAN_UPDATE_RATE, EEPROM_ADDRESS + ledController->getEEPROMSize());
-
-	clp = new CorsairLightingProtocol(ledController, tempController, fanController);
-
-	ledController->addLeds(0, channel1);
-	ledController->addLeds(1, channel2);
-
-	clp->begin();
+CommanderPro<CHANNEL_LED_COUNT>::CommanderPro(bool useEEPROM) : CommanderPro(useEEPROM, DEFAULT_FAN_UPDATE_RATE) {
 }
 
 
 template<size_t CHANNEL_LED_COUNT>
 CommanderPro<CHANNEL_LED_COUNT>::CommanderPro(bool useEEPROM, uint8_t fanUpdateRate) {
-	ledController = new LEDController<CHANNEL_LED_COUNT>(useEEPROM);
+	ledController = new FastLEDController<CHANNEL_LED_COUNT>(tempController, useEEPROM);
 	tempController = new FakeTemperatureController();
 	fanController = new SimpleFanController(tempController, fanUpdateRate, EEPROM_ADDRESS + ledController->getEEPROMSize());
 
-	clp = new CorsairLightingProtocol(ledController, tempController, fanController);
+	clp = new CorsairLightingProtocol(ledController, tempController, fanController, DEFAULT_FIRMWARE_VERSION);
+	cHID = new CorsairLightingProtocolHID(clp);
 
 	ledController->addLeds(0, channel1);
 	ledController->addLeds(1, channel2);
-
-	clp->begin();
 }
 
 template<size_t CHANNEL_LED_COUNT>
@@ -88,11 +81,9 @@ void CommanderPro<CHANNEL_LED_COUNT>::addFan(uint8_t index, IFan* fan) {
 
 template<size_t CHANNEL_LED_COUNT>
 bool CommanderPro<CHANNEL_LED_COUNT>::update() {
-	if (clp->available())
-	{
-		clp->getCommand(cmd);
-		clp->handleCommand(cmd);
-	}
+	cHID->update();
+
 	fanController->updateFans();
+	
 	return ledController->updateLEDs();
 }
