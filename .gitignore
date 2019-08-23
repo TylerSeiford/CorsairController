@@ -41,3 +41,4 @@ Release/*
 Kicad/fp-info-cache
 Kicad/fp-lib-table
 Kicad/sym-lib-table
+Private/*
