@@ -31,7 +31,7 @@ void setup() {
 	pinMode(RGB_3, OUTPUT);
 
 	cp->addFan(0, new PWMFan(FAN_1_PWM, F1_MIN, F1_MAX));
-	cp->addFan(1, new PWMFan(FAN_2_PWM, F1_MIN, F2_MAX));
+	cp->addFan(1, new PWMFan(FAN_2_PWM, F2_MIN, F2_MAX));
 }
 
 void loop() {
