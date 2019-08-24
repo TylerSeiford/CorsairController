@@ -1,9 +1,3 @@
-/*
- Name:		CorsairLightingController.ino
- Created:	5/24/2019 8:35:34 PM
- Author:	Tyler
-*/
-
 #include "CommanderPro.h"
 #include "Config.h"
 
@@ -36,8 +30,8 @@ void setup() {
 	pinMode(RGB_2, OUTPUT);
 	pinMode(RGB_3, OUTPUT);
 
-	cp->addFan(0, new DCFan(FAN_1_PWM, 0, 950));
-	cp->addFan(1, new PWMFan(FAN_2_PWM, 0, 1500));
+	cp->addFan(0, new PWMFan(FAN_1_PWM, F1_MIN, F1_MAX));
+	cp->addFan(1, new PWMFan(FAN_2_PWM, F1_MIN, F2_MAX));
 }
 
 void loop() {
