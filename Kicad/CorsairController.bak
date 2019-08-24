@@ -415,10 +415,6 @@ Wire Wire Line
 	10700 2350 10700 3250
 Wire Wire Line
 	10700 3250 10600 3250
-Entry Wire Line
-	7400 2150 7500 2250
-Text Label 8150 2350 0    50   ~ 0
-5V
 NoConn ~ 10600 3050
 NoConn ~ 10600 3350
 NoConn ~ 10600 3450
@@ -471,7 +467,7 @@ Entry Wire Line
 Wire Wire Line
 	7600 2250 9600 2250
 Wire Wire Line
-	9600 2250 9600 2450
+	9600 2250 9600 2350
 Text Label 8150 2250 0    50   ~ 0
 GND
 Text Label 10450 2350 0    50   ~ 0
@@ -585,10 +581,6 @@ Wire Wire Line
 Connection ~ 10150 2450
 Wire Wire Line
 	10150 2450 9600 2450
-Wire Wire Line
-	7500 2350 9950 2350
-Wire Wire Line
-	7500 2250 7500 2350
 Wire Wire Line
 	10350 2350 10700 2350
 $Comp
@@ -732,6 +724,8 @@ Wire Wire Line
 Wire Wire Line
 	4850 4250 3800 4350
 Wire Wire Line
+	9950 2350 9600 2350
+Wire Wire Line
 	3800 6550 4250 6550
 Wire Wire Line
 	3800 6100 4350 6100
@@ -757,4 +751,7 @@ Wire Bus Line
 	4150 2150 7850 2150
 Wire Bus Line
 	4150 2150 4150 6850
+Connection ~ 9600 2350
+Wire Wire Line
+	9600 2350 9600 2450
 $EndSCHEMATC

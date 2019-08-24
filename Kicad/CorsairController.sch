@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Conn_01x03_Male J-A2
-U 1 1 5D3A2B22
-P 3600 5600
-F 0 "J-A2" H 3600 5550 50  0000 R CNN
-F 1 "Conn_01x03_Male" H 3600 5650 50  0000 R CNN
-F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 3600 5600 50  0001 C CNN
-F 3 "~" H 3600 5600 50  0001 C CNN
-	1    3600 5600
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x03_Male J-PWR1
 U 1 1 5D3A5580
 P 6900 1600
@@ -47,40 +36,8 @@ F 3 "~" H 5800 1600 50  0001 C CNN
 	1    5800 1600
 	0    1    1    0   
 $EndComp
-$Comp
-L Connector:Conn_01x04_Male J-RGB1
-U 1 1 5D3AD15A
-P 3600 4600
-F 0 "J-RGB1" H 3450 4450 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 3250 4550 50  0000 C CNN
-F 2 "footprints:PinHeader_1x04_P2.54mm_Vertical" H 3600 4600 50  0001 C CNN
-F 3 "~" H 3600 4600 50  0001 C CNN
-	1    3600 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x04_Male J-F1
-U 1 1 5D3AE865
-P 3600 3400
-F 0 "J-F1" H 3500 3250 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 3250 3350 50  0000 C CNN
-F 2 "footprints:FanPinHeader_1x04_P2.54mm_Vertical" H 3600 3400 50  0001 C CNN
-F 3 "~" H 3600 3400 50  0001 C CNN
-	1    3600 3400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3800 4500 4050 4500
-Text Label 3850 4500 0    50   ~ 0
-12V
-Text Label 3850 4250 0    50   ~ 0
-12V
-Text Label 3850 3400 0    50   ~ 0
-12V
 Text Label 6200 2150 0    50   ~ 0
 POWER_BUS
-Entry Wire Line
-	4050 4500 4150 4600
 Text Label 7000 2050 1    50   ~ 0
 12V
 Text Label 6900 2050 1    50   ~ 0
@@ -93,30 +50,6 @@ Entry Wire Line
 	6900 2050 7000 2150
 Entry Wire Line
 	6800 2050 6900 2150
-Wire Wire Line
-	3800 5200 4050 5200
-Wire Wire Line
-	3800 5000 4050 5000
-Wire Wire Line
-	3800 5500 4050 5500
-Wire Wire Line
-	3800 5700 4050 5700
-Text Label 3850 5700 0    50   ~ 0
-GND
-Text Label 3850 5200 0    50   ~ 0
-GND
-Text Label 3850 5500 0    50   ~ 0
-12V
-Text Label 3850 5000 0    50   ~ 0
-12V
-Entry Wire Line
-	4050 5000 4150 5100
-Entry Wire Line
-	4050 5200 4150 5300
-Entry Wire Line
-	4050 5500 4150 5600
-Entry Wire Line
-	4050 5700 4150 5800
 Text Label 5600 1900 3    50   ~ 0
 GND
 Wire Wire Line
@@ -145,119 +78,6 @@ Text Label 5700 2050 1    50   ~ 0
 RX
 Text Label 5800 2050 1    50   ~ 0
 TX
-Text Label 9400 3050 0    50   ~ 0
-TX
-Text Label 9400 3150 0    50   ~ 0
-RX
-Text Label 3850 5100 0    50   ~ 0
-A1
-Text Label 3850 5600 0    50   ~ 0
-A2
-Text Label 9400 3650 0    50   ~ 0
-A1
-Text Label 9400 4050 0    50   ~ 0
-A2
-$Comp
-L Transistor_FET:IRF3205 Q-F1
-U 1 1 5D3D9FF8
-P 7100 3200
-F 0 "Q-F1" H 7305 3154 50  0000 L CNN
-F 1 "IRF3205" H 6800 3350 50  0000 L CNN
-F 2 "footprints:TO-220-3_Vertical" H 7350 3125 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 7100 3200 50  0001 L CNN
-	1    7100 3200
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_FET:IRF3205 Q-F2
-U 1 1 5D3E1F42
-P 7100 4050
-F 0 "Q-F2" H 7305 4004 50  0000 L CNN
-F 1 "IRF3205" H 6800 4200 50  0000 L CNN
-F 2 "footprints:TO-220-3_Vertical" H 7350 3975 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 7100 4050 50  0001 L CNN
-	1    7100 4050
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_FET:IRF3205 Q-R1
-U 1 1 5D3E2E38
-P 6100 4700
-F 0 "Q-R1" H 6305 4654 50  0000 L CNN
-F 1 "IRF3205" H 5800 4850 50  0000 L CNN
-F 2 "footprints:TO-220-3_Vertical" H 6350 4625 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 6100 4700 50  0001 L CNN
-	1    6100 4700
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_FET:IRF3205 Q-G1
-U 1 1 5D3E8DAE
-P 6100 5200
-F 0 "Q-G1" H 6305 5154 50  0000 L CNN
-F 1 "IRF3205" H 5800 5350 50  0000 L CNN
-F 2 "footprints:TO-220-3_Vertical" H 6350 5125 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 6100 5200 50  0001 L CNN
-	1    6100 5200
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_FET:IRF3205 Q-B1
-U 1 1 5D3E9ACD
-P 6100 5700
-F 0 "Q-B1" H 6305 5654 50  0000 L CNN
-F 1 "IRF3205" H 5800 5850 50  0000 L CNN
-F 2 "footprints:TO-220-3_Vertical" H 6350 5625 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 6100 5700 50  0001 L CNN
-	1    6100 5700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6000 4500 4250 4500
-Wire Wire Line
-	6000 5000 4250 5000
-Wire Wire Line
-	6000 5500 4250 5500
-Entry Wire Line
-	4150 4400 4250 4500
-Entry Wire Line
-	4150 4900 4250 5000
-Entry Wire Line
-	4150 5400 4250 5500
-Text Label 4500 5500 0    50   ~ 0
-GND
-Text Label 4500 5000 0    50   ~ 0
-GND
-Text Label 4500 4500 0    50   ~ 0
-GND
-Wire Wire Line
-	6000 4900 5650 4900
-Wire Wire Line
-	5650 4900 5650 4600
-Wire Wire Line
-	5550 4700 3800 4700
-Wire Wire Line
-	6000 5900 5450 5900
-Wire Wire Line
-	5450 5900 5450 4800
-Text Label 4500 4600 0    50   ~ 0
-R-12V
-Text Label 4500 4700 0    50   ~ 0
-G-12V
-Text Label 4500 4800 0    50   ~ 0
-B-12V
-Text Label 9400 3850 0    50   ~ 0
-R-5V
-Text Label 9400 4150 0    50   ~ 0
-G-5V
-Text Label 9400 4350 0    50   ~ 0
-B-5V
-Wire Wire Line
-	9700 4150 9050 4150
-Wire Wire Line
-	9700 4050 9150 4050
-Wire Wire Line
-	9700 3050 9350 3050
 $Comp
 L SparkFun-Boards:PRO_MICRO U1
 U 1 1 5D3B1525
@@ -270,136 +90,6 @@ F 4 "XXX-00000" H 10150 4331 60  0000 C CNN "Field4"
 	1    10150 3600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9700 3850 8850 3850
-Wire Wire Line
-	8950 4350 10600 4350
-Wire Wire Line
-	10600 4350 10600 4150
-Text Label 6300 4700 0    50   ~ 0
-R-5V
-Text Label 6300 5200 0    50   ~ 0
-G-5V
-Text Label 6300 5700 0    50   ~ 0
-B-5V
-Wire Bus Line
-	8550 2800 7700 2800
-Text Label 6200 2800 0    50   ~ 0
-FAN_BUS
-Entry Wire Line
-	7600 3200 7700 3300
-Entry Wire Line
-	7600 4050 7700 4150
-Text Label 7300 3200 0    50   ~ 0
-F1-5V
-Text Label 7300 4050 0    50   ~ 0
-F2-5V
-Entry Wire Line
-	8550 3450 8650 3550
-Entry Wire Line
-	8550 3650 8650 3750
-Text Label 9400 3550 0    50   ~ 0
-F2-5V
-Text Label 9400 3750 0    50   ~ 0
-F1-5V
-Wire Wire Line
-	9700 3450 8650 3450
-Text Label 9400 3450 0    50   ~ 0
-F2-T
-Text Label 9400 3950 0    50   ~ 0
-F1-T
-$Comp
-L Switch:SW_SPDT SW1
-U 1 1 5D3C73AF
-P 6150 3300
-F 0 "SW1" H 6050 3400 50  0000 C CNN
-F 1 "SW_SPDT" H 6150 3494 50  0000 C CNN
-F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 6150 3300 50  0001 C CNN
-F 3 "~" H 6150 3300 50  0001 C CNN
-	1    6150 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_SPDT SW2
-U 1 1 5D3CA2AB
-P 6150 4150
-F 0 "SW2" H 6050 4250 50  0000 C CNN
-F 1 "SW_SPDT" H 6150 4344 50  0000 C CNN
-F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 6150 4150 50  0001 C CNN
-F 3 "~" H 6150 4150 50  0001 C CNN
-	1    6150 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7000 3400 6350 3400
-Wire Wire Line
-	7000 4250 6350 4250
-$Comp
-L Connector:Conn_01x04_Male J-F2
-U 1 1 5D3AAAFE
-P 3600 4250
-F 0 "J-F2" H 3500 4100 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 3250 4200 50  0000 C CNN
-F 2 "footprints:FanPinHeader_1x04_P2.54mm_Vertical" H 3600 4250 50  0001 C CNN
-F 3 "~" H 3600 4250 50  0001 C CNN
-	1    3600 4250
-	1    0    0    -1  
-$EndComp
-Text Label 4500 4150 0    50   ~ 0
-F2-GND
-Entry Wire Line
-	4050 4250 4150 4350
-Wire Wire Line
-	5450 4800 3800 4800
-Wire Bus Line
-	7700 2800 4950 2800
-Connection ~ 7700 2800
-Wire Wire Line
-	7000 3000 7750 3000
-Wire Wire Line
-	7000 3850 7750 3850
-Entry Wire Line
-	7750 3000 7850 3100
-Entry Wire Line
-	7750 3850 7850 3950
-Text Label 7300 3000 0    50   ~ 0
-GND
-Text Label 7300 3850 0    50   ~ 0
-GND
-Wire Wire Line
-	3800 3600 4850 3600
-Wire Wire Line
-	3800 3400 4050 3400
-Entry Wire Line
-	4050 3400 4150 3500
-Text Label 3850 3500 0    50   ~ 0
-F1-T
-Text Label 3850 3600 0    50   ~ 0
-F1-5V
-Text Label 4850 4250 0    50   ~ 0
-F2-T
-Text Label 4850 4350 0    50   ~ 0
-F2-5V
-Entry Wire Line
-	4850 3600 4950 3700
-Entry Wire Line
-	4850 3500 4950 3600
-Text Label 4500 3300 0    50   ~ 0
-F1-GND
-Wire Wire Line
-	7300 3200 7600 3200
-Wire Wire Line
-	7300 4050 7600 4050
-Wire Wire Line
-	7000 3850 6350 3850
-Wire Wire Line
-	6350 3850 6350 4050
-Connection ~ 7000 3850
-Wire Wire Line
-	6350 3200 6350 3000
-Wire Wire Line
-	6350 3000 7000 3000
-Connection ~ 7000 3000
 $Comp
 L Switch:SW_Push_Dual SW3
 U 1 1 5D47FE3D
@@ -458,10 +148,6 @@ Text Label 7750 2050 1    50   ~ 0
 GND
 NoConn ~ 10350 2150
 NoConn ~ 9950 2150
-Text Label 6350 3400 0    50   ~ 0
-F1-12V
-Text Label 6350 4250 0    50   ~ 0
-F2-12V
 Entry Wire Line
 	7500 2150 7600 2250
 Wire Wire Line
@@ -486,24 +172,6 @@ Wire Wire Line
 Connection ~ 9600 2450
 Wire Wire Line
 	9600 2450 9600 3250
-Wire Wire Line
-	8650 3750 9700 3750
-Entry Wire Line
-	8550 3350 8650 3450
-Entry Wire Line
-	8550 3850 8650 3950
-Wire Wire Line
-	8950 5700 8950 4350
-Wire Wire Line
-	6300 5700 8950 5700
-Wire Wire Line
-	6000 5400 5550 5400
-Wire Wire Line
-	5550 4700 5550 5400
-Wire Wire Line
-	9050 5200 9050 4150
-Wire Wire Line
-	6300 5200 9050 5200
 $Comp
 L power:GND #PWR0101
 U 1 1 5D4BC2AA
@@ -527,47 +195,9 @@ F 3 "~" H 7550 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6300 4700 6950 4700
-Wire Wire Line
-	6950 4700 6950 5100
-Wire Wire Line
-	6950 5100 8850 5100
-Wire Wire Line
-	8850 5100 8850 3850
-Wire Wire Line
-	8650 3950 9700 3950
-Wire Wire Line
-	8650 3550 9700 3550
-Wire Wire Line
-	9150 4050 9150 6000
-Wire Wire Line
-	9150 6000 4250 6000
-Wire Wire Line
-	4250 6000 4250 5600
-Wire Wire Line
-	8750 3650 8750 6100
-Wire Wire Line
-	8750 6100 4350 6100
-Wire Wire Line
-	4350 6100 4350 5100
-Wire Wire Line
-	8750 3650 9700 3650
-Wire Wire Line
-	9350 3050 9350 2450
-Wire Wire Line
 	9350 2450 5800 2450
 Wire Wire Line
 	5800 1800 5800 2450
-Wire Wire Line
-	9250 3150 9250 2550
-Wire Wire Line
-	9250 2550 5700 2550
-Wire Wire Line
-	9250 3150 9700 3150
-Entry Wire Line
-	4850 4350 4950 4450
-Entry Wire Line
-	4850 4250 4950 4350
 Entry Wire Line
 	7750 2050 7850 2150
 Entry Wire Line
@@ -583,37 +213,29 @@ Wire Wire Line
 	10150 2450 9600 2450
 Wire Wire Line
 	10350 2350 10700 2350
+Wire Wire Line
+	9950 2350 9600 2350
+Connection ~ 9600 2350
+Wire Wire Line
+	9600 2350 9600 2450
+Text Label 2250 2700 0    50   ~ 0
+GND
+Wire Wire Line
+	4050 2700 1300 2700
+Entry Wire Line
+	4050 2700 4150 2800
+Wire Wire Line
+	1300 2700 1300 3000
+Connection ~ 1300 3000
 $Comp
-L Connector:Conn_01x03_Male J-A1
-U 1 1 5D3A4B03
-P 3600 5100
-F 0 "J-A1" H 3600 5050 50  0000 R CNN
-F 1 "Conn_01x03_Male" H 3600 5150 50  0000 R CNN
-F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 3600 5100 50  0001 C CNN
-F 3 "~" H 3600 5100 50  0001 C CNN
-	1    3600 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female H2
-U 1 1 5D5374A4
-P 1500 3500
-F 0 "H2" H 1600 3546 50  0000 L CNN
-F 1 "MountingHole" H 1600 3455 50  0000 L CNN
-F 2 "footprints:MountingHole_3.2mm_M3_Pad" H 1500 3500 50  0001 C CNN
-F 3 "~" H 1500 3500 50  0001 C CNN
-	1    1500 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female H3
-U 1 1 5D537E45
-P 1500 4000
-F 0 "H3" H 1600 4046 50  0000 L CNN
-F 1 "MountingHole" H 1600 3955 50  0000 L CNN
-F 2 "footprints:MountingHole_3.2mm_M3_Pad" H 1500 4000 50  0001 C CNN
-F 3 "~" H 1500 4000 50  0001 C CNN
-	1    1500 4000
+L Connector:Conn_01x01_Female H1
+U 1 1 5D538581
+P 1500 3000
+F 0 "H1" H 1600 3046 50  0000 L CNN
+F 1 "MountingHole" H 1600 2955 50  0000 L CNN
+F 2 "footprints:MountingHole_3.2mm_M3_Pad" H 1500 3000 50  0001 C CNN
+F 3 "~" H 1500 3000 50  0001 C CNN
+	1    1500 3000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -627,131 +249,87 @@ F 3 "~" H 1500 4500 50  0001 C CNN
 	1    1500 4500
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x01_Female H1
-U 1 1 5D538581
-P 1500 3000
-F 0 "H1" H 1600 3046 50  0000 L CNN
-F 1 "MountingHole" H 1600 2955 50  0000 L CNN
-F 2 "footprints:MountingHole_3.2mm_M3_Pad" H 1500 3000 50  0001 C CNN
-F 3 "~" H 1500 3000 50  0001 C CNN
-	1    1500 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x04_Male J-ARGB1
-U 1 1 5D54F115
-P 3600 6100
-F 0 "J-ARGB1" H 3450 5950 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 3250 6050 50  0000 C CNN
-F 2 "footprints:PinHeader_1x04_P2.54mm_Vertical" H 3600 6100 50  0001 C CNN
-F 3 "~" H 3600 6100 50  0001 C CNN
-	1    3600 6100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x04_Male J-ARGB2
-U 1 1 5D54FB51
-P 3600 6550
-F 0 "J-ARGB2" H 3450 6400 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 3250 6500 50  0000 C CNN
-F 2 "footprints:PinHeader_1x04_P2.54mm_Vertical" H 3600 6550 50  0001 C CNN
-F 3 "~" H 3600 6550 50  0001 C CNN
-	1    3600 6550
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	4050 6750 4150 6850
-Entry Wire Line
-	4050 6300 4150 6400
-Entry Wire Line
-	4050 6000 4150 6100
-Entry Wire Line
-	4050 6450 4150 6550
-Wire Wire Line
-	4050 6450 3800 6450
-Wire Wire Line
-	4050 6750 3800 6750
-Wire Wire Line
-	4050 6300 3800 6300
-Wire Wire Line
-	4050 6000 3800 6000
-Text Label 3850 6000 0    50   ~ 0
-5V
-Text Label 3850 6450 0    50   ~ 0
-5V
-Text Label 3850 6750 0    50   ~ 0
-GND
-Text Label 3850 6300 0    50   ~ 0
-GND
-Connection ~ 4350 6100
-Wire Wire Line
-	4250 6550 4250 6000
-Connection ~ 4250 6000
-NoConn ~ 3800 6200
-NoConn ~ 3800 6650
-Text Label 3850 6550 0    50   ~ 0
-A2
-Text Label 3850 6100 0    50   ~ 0
-A1
 Wire Wire Line
 	1300 4500 1300 4000
-Wire Wire Line
-	1300 3500 1300 4000
 Connection ~ 1300 4000
+$Comp
+L Connector:Conn_01x01_Female H3
+U 1 1 5D537E45
+P 1500 4000
+F 0 "H3" H 1600 4046 50  0000 L CNN
+F 1 "MountingHole" H 1600 3955 50  0000 L CNN
+F 2 "footprints:MountingHole_3.2mm_M3_Pad" H 1500 4000 50  0001 C CNN
+F 3 "~" H 1500 4000 50  0001 C CNN
+	1    1500 4000
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	1300 3500 1300 3000
+Wire Wire Line
+	1300 3500 1300 4000
 Connection ~ 1300 3500
-Entry Wire Line
-	4050 2700 4150 2800
+$Comp
+L Connector:Conn_01x01_Female H2
+U 1 1 5D5374A4
+P 1500 3500
+F 0 "H2" H 1600 3546 50  0000 L CNN
+F 1 "MountingHole" H 1600 3455 50  0000 L CNN
+F 2 "footprints:MountingHole_3.2mm_M3_Pad" H 1500 3500 50  0001 C CNN
+F 3 "~" H 1500 3500 50  0001 C CNN
+	1    1500 3500
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4050 2700 1300 2700
+	9250 3150 9700 3150
 Wire Wire Line
-	1300 2700 1300 3000
-Connection ~ 1300 3000
-Text Label 2250 2700 0    50   ~ 0
-GND
+	9250 2550 5700 2550
 Wire Wire Line
-	3800 3300 5950 3300
+	9250 3150 9250 2550
 Wire Wire Line
-	3800 4150 5950 4150
+	9350 3050 9350 2450
 Wire Wire Line
-	3800 4450 4850 4450
-Wire Wire Line
-	4850 4450 4850 4350
-Wire Wire Line
-	3800 4250 4050 4250
-Wire Wire Line
-	4850 4250 3800 4350
-Wire Wire Line
-	9950 2350 9600 2350
-Wire Wire Line
-	3800 6550 4250 6550
-Wire Wire Line
-	3800 6100 4350 6100
-Wire Wire Line
-	3800 3500 4850 3500
+	9700 3050 9350 3050
+Text Label 9400 3150 0    50   ~ 0
+RX
+Text Label 9400 3050 0    50   ~ 0
+TX
 Wire Bus Line
-	7850 2150 7850 3950
-Wire Bus Line
-	7700 2800 7700 4150
+	4150 2150 4150 2800
 Wire Wire Line
 	5700 1800 5700 2550
-Wire Wire Line
-	3800 5600 4250 5600
-Wire Wire Line
-	3800 5100 4350 5100
-Wire Wire Line
-	3800 4600 5650 4600
-Wire Bus Line
-	4950 2800 4950 4450
-Wire Bus Line
-	8550 2800 8550 3850
 Wire Bus Line
 	4150 2150 7850 2150
-Wire Bus Line
-	4150 2150 4150 6850
-Connection ~ 9600 2350
-Wire Wire Line
-	9600 2350 9600 2450
+$Comp
+L Connector:Conn_01x04_Male J-F1
+U 1 1 5D6805FE
+P 3350 3150
+F 0 "J-F1" H 3458 3431 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 3458 3340 50  0000 C CNN
+F 2 "" H 3350 3150 50  0001 C CNN
+F 3 "~" H 3350 3150 50  0001 C CNN
+	1    3350 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF3205 Q-F1
+U 1 1 5D682B84
+P 5350 3200
+F 0 "Q-F1" H 5556 3246 50  0000 L CNN
+F 1 "IRF3205" H 5556 3155 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5600 3125 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 5350 3200 50  0001 L CNN
+	1    5350 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPDT SW-F1
+U 1 1 5D6839F1
+P 4850 3550
+F 0 "SW-F1" H 4850 3835 50  0000 C CNN
+F 1 "SW_SPDT" H 4850 3744 50  0000 C CNN
+F 2 "" H 4850 3550 50  0001 C CNN
+F 3 "~" H 4850 3550 50  0001 C CNN
+	1    4850 3550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
