@@ -57,27 +57,10 @@ F 4 "XXX-00000" H 7450 4331 60  0000 C CNN "Field4"
 	1    7450 3600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Switch:SW_Push_Dual SW3
-U 1 1 5D47FE3D
-P 8150 2150
-F 0 "SW3" H 8150 2435 50  0000 C CNN
-F 1 "SW_Push" H 8150 2344 50  0000 C CNN
-F 2 "footprints:ESE-20C423" H 8150 2350 50  0001 C CNN
-F 3 "~" H 8150 2350 50  0001 C CNN
-	1    8150 2150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	8750 2350 8750 3250
-Wire Wire Line
-	8750 3250 7900 3250
+	8200 3250 7900 3250
 NoConn ~ 7900 3050
 NoConn ~ 7900 3350
-NoConn ~ 7900 3450
-NoConn ~ 7900 3550
-NoConn ~ 7900 3650
-NoConn ~ 7900 3750
 NoConn ~ 7900 3850
 NoConn ~ 7900 3950
 NoConn ~ 7900 4050
@@ -111,8 +94,6 @@ Text Label 7550 2050 1    50   ~ 0
 12V
 Text Label 7750 2050 1    50   ~ 0
 GND
-NoConn ~ 8350 2150
-NoConn ~ 7950 2150
 Entry Wire Line
 	5900 2150 6000 2250
 Wire Wire Line
@@ -121,7 +102,7 @@ Wire Wire Line
 	6900 2250 6900 2350
 Text Label 6050 2250 0    50   ~ 0
 GND
-Text Label 8450 2350 0    50   ~ 0
+Text Label 8200 3250 0    50   ~ 0
 RESET
 Wire Wire Line
 	7900 3150 8000 3150
@@ -164,10 +145,6 @@ Wire Wire Line
 Connection ~ 7450 2450
 Wire Wire Line
 	7450 2450 6900 2450
-Wire Wire Line
-	8350 2350 8750 2350
-Wire Wire Line
-	7950 2350 6900 2350
 Connection ~ 6900 2350
 Wire Wire Line
 	6900 2350 6900 2450
@@ -626,6 +603,213 @@ NoConn ~ 7000 3950
 NoConn ~ 7000 4050
 NoConn ~ 7000 3050
 NoConn ~ 7000 3150
+$Comp
+L Device:R R-T1
+U 1 1 5D6B117E
+P 9950 2850
+F 0 "R-T1" V 9743 2850 50  0000 C CNN
+F 1 "R" V 9834 2850 50  0000 C CNN
+F 2 "" V 9880 2850 50  0001 C CNN
+F 3 "~" H 9950 2850 50  0001 C CNN
+	1    9950 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J-T1
+U 1 1 5D6B2231
+P 10400 2950
+F 0 "J-T1" H 10372 2832 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 10372 2923 50  0000 R CNN
+F 2 "footprints:PinHeader_1x02_P2.54mm_Vertical" H 10400 2950 50  0001 C CNN
+F 3 "~" H 10400 2950 50  0001 C CNN
+	1    10400 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J-T2
+U 1 1 5D6B5044
+P 10400 3250
+F 0 "J-T2" H 10372 3132 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 10372 3223 50  0000 R CNN
+F 2 "footprints:PinHeader_1x02_P2.54mm_Vertical" H 10400 3250 50  0001 C CNN
+F 3 "~" H 10400 3250 50  0001 C CNN
+	1    10400 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J-T3
+U 1 1 5D6B59EA
+P 10400 3550
+F 0 "J-T3" H 10372 3432 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 10372 3523 50  0000 R CNN
+F 2 "footprints:PinHeader_1x02_P2.54mm_Vertical" H 10400 3550 50  0001 C CNN
+F 3 "~" H 10400 3550 50  0001 C CNN
+	1    10400 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J-T4
+U 1 1 5D6B61EE
+P 10400 3850
+F 0 "J-T4" H 10372 3732 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 10372 3823 50  0000 R CNN
+F 2 "footprints:PinHeader_1x02_P2.54mm_Vertical" H 10400 3850 50  0001 C CNN
+F 3 "~" H 10400 3850 50  0001 C CNN
+	1    10400 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R-T2
+U 1 1 5D6B68EE
+P 9950 3150
+F 0 "R-T2" V 9743 3150 50  0000 C CNN
+F 1 "R" V 9834 3150 50  0000 C CNN
+F 2 "" V 9880 3150 50  0001 C CNN
+F 3 "~" H 9950 3150 50  0001 C CNN
+	1    9950 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R-T3
+U 1 1 5D6B6C7A
+P 9950 3450
+F 0 "R-T3" V 9743 3450 50  0000 C CNN
+F 1 "R" V 9834 3450 50  0000 C CNN
+F 2 "" V 9880 3450 50  0001 C CNN
+F 3 "~" H 9950 3450 50  0001 C CNN
+	1    9950 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R-T4
+U 1 1 5D6B7092
+P 9950 3750
+F 0 "R-T4" V 9743 3750 50  0000 C CNN
+F 1 "R" V 9834 3750 50  0000 C CNN
+F 2 "" V 9880 3750 50  0001 C CNN
+F 3 "~" H 9950 3750 50  0001 C CNN
+	1    9950 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8200 2350 6900 2350
+NoConn ~ 8400 2550
+NoConn ~ 8400 2950
+$Comp
+L Switch:SW_Push_Dual SW1
+U 1 1 5D47FE3D
+P 8400 2750
+F 0 "SW1" H 8400 3035 50  0000 C CNN
+F 1 "SW_Push" H 8400 2944 50  0000 C CNN
+F 2 "footprints:ESE-20C423" H 8400 2950 50  0001 C CNN
+F 3 "~" H 8400 2950 50  0001 C CNN
+	1    8400 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8200 3250 8200 2950
+Wire Wire Line
+	8200 2350 8200 2550
+Entry Wire Line
+	9500 2750 9600 2850
+Wire Wire Line
+	9600 2850 9800 2850
+Wire Wire Line
+	9800 3150 9800 2850
+Connection ~ 9800 2850
+Wire Wire Line
+	9800 3750 9800 3450
+Wire Wire Line
+	9800 3450 9800 3150
+Connection ~ 9800 3450
+Connection ~ 9800 3150
+Wire Wire Line
+	10200 3250 9700 3250
+Wire Wire Line
+	9700 3250 9700 2950
+Wire Wire Line
+	9700 2950 10200 2950
+Wire Wire Line
+	10200 3850 9700 3850
+Wire Wire Line
+	9700 3850 9700 3550
+Wire Wire Line
+	9700 3550 10200 3550
+Wire Wire Line
+	9700 3550 9700 3250
+Connection ~ 9700 3550
+Connection ~ 9700 3250
+Entry Wire Line
+	9500 2850 9600 2950
+Wire Wire Line
+	9600 2950 9700 2950
+Connection ~ 9700 2950
+Text Label 9800 3100 1    50   ~ 0
+5V
+Text Label 9700 3150 1    50   ~ 0
+GND
+Wire Wire Line
+	10100 2850 10150 2850
+Wire Wire Line
+	10200 3150 10150 3150
+Wire Wire Line
+	10200 3750 10150 3750
+Wire Wire Line
+	10150 2850 10150 2500
+Wire Wire Line
+	10150 2500 9400 2500
+Wire Wire Line
+	9400 2500 9400 3750
+Wire Wire Line
+	9400 3750 7900 3750
+Connection ~ 10150 2850
+Wire Wire Line
+	10150 2850 10200 2850
+Wire Wire Line
+	10150 3350 10150 3150
+Connection ~ 10150 3150
+Wire Wire Line
+	10150 3150 10100 3150
+Wire Wire Line
+	9300 3550 7900 3550
+Wire Wire Line
+	10100 3450 10150 3450
+Wire Wire Line
+	10150 3750 10150 3950
+Wire Wire Line
+	10150 3950 9200 3950
+Wire Wire Line
+	9200 3950 9200 3450
+Wire Wire Line
+	9200 3450 7900 3450
+Connection ~ 10150 3750
+Wire Wire Line
+	10150 3750 10100 3750
+Wire Wire Line
+	10150 3450 10150 3650
+Wire Wire Line
+	10150 3650 9300 3650
+Wire Wire Line
+	9300 3650 9300 3550
+Connection ~ 10150 3450
+Wire Wire Line
+	10150 3450 10200 3450
+Wire Wire Line
+	9100 3350 9100 3650
+Wire Wire Line
+	9100 3650 7900 3650
+Wire Wire Line
+	9100 3350 10150 3350
 Wire Bus Line
-	4150 2150 7850 2150
+	9500 2150 9500 2850
+Wire Bus Line
+	4150 2150 9500 2150
+Text Label 8000 3450 0    50   ~ 0
+T4
+Text Label 8000 3550 0    50   ~ 0
+T3
+Text Label 8000 3650 0    50   ~ 0
+T2
+Text Label 8000 3750 0    50   ~ 0
+T1
 $EndSCHEMATC
