@@ -25,17 +25,6 @@ F 3 "~" H 6900 1600 50  0001 C CNN
 	1    6900 1600
 	0    1    1    0   
 $EndComp
-$Comp
-L Connector:Conn_01x05_Male J-UART1
-U 1 1 5D3A7894
-P 5800 1600
-F 0 "J-UART1" V 5650 1400 50  0000 L CNN
-F 1 "Conn_01x05_Male" V 5750 1400 50  0000 L CNN
-F 2 "footprints:PinHeader_1x05_P2.54mm_Vertical" H 5800 1600 50  0001 C CNN
-F 3 "~" H 5800 1600 50  0001 C CNN
-	1    5800 1600
-	0    1    1    0   
-$EndComp
 Text Label 6200 2150 0    50   ~ 0
 POWER_BUS
 Text Label 7000 2050 1    50   ~ 0
@@ -50,34 +39,12 @@ Entry Wire Line
 	6900 2050 7000 2150
 Entry Wire Line
 	6800 2050 6900 2150
-Text Label 5600 1900 3    50   ~ 0
-GND
 Wire Wire Line
 	7000 2050 7000 1800
 Wire Wire Line
 	6900 2050 6900 1800
 Wire Wire Line
 	6800 2050 6800 1800
-Wire Wire Line
-	5600 1800 5600 2050
-Wire Wire Line
-	5900 1800 5900 2050
-Wire Wire Line
-	6000 1800 6000 2050
-Text Label 5900 2050 1    50   ~ 0
-5V
-Text Label 6000 2050 1    50   ~ 0
-12V
-Entry Wire Line
-	6000 2050 6100 2150
-Entry Wire Line
-	5900 2050 6000 2150
-Entry Wire Line
-	5600 2050 5700 2150
-Text Label 5700 2050 1    50   ~ 0
-RX
-Text Label 5800 2050 1    50   ~ 0
-TX
 $Comp
 L SparkFun-Boards:PRO_MICRO U1
 U 1 1 5D3B1525
@@ -91,10 +58,10 @@ F 4 "XXX-00000" H 7450 4331 60  0000 C CNN "Field4"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push_Dual SW3
+L Switch:SW_Push_Dual SW1
 U 1 1 5D47FE3D
 P 8150 2150
-F 0 "SW3" H 8150 2435 50  0000 C CNN
+F 0 "SW1" H 8150 2435 50  0000 C CNN
 F 1 "SW_Push" H 8150 2344 50  0000 C CNN
 F 2 "footprints:ESE-20C423" H 8150 2350 50  0001 C CNN
 F 3 "~" H 8150 2350 50  0001 C CNN
@@ -263,25 +230,6 @@ F 3 "~" H 1500 3500 50  0001 C CNN
 	1    1500 3500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5700 3150 7000 3150
-Wire Wire Line
-	7000 3050 5800 3050
-Text Label 5900 3150 0    50   ~ 0
-RX
-Text Label 5900 3050 0    50   ~ 0
-TX
-$Comp
-L Transistor_FET:IRF3205 Q-F1
-U 1 1 5D682B84
-P 5500 3400
-F 0 "Q-F1" H 5706 3446 50  0000 L CNN
-F 1 "IRF3205" H 5706 3355 50  0000 L CNN
-F 2 "footprints:TO-220-3_Vertical" H 5750 3325 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 5500 3400 50  0001 L CNN
-	1    5500 3400
-	-1   0    0    1   
-$EndComp
 $Comp
 L Switch:SW_SPDT SW-F1
 U 1 1 5D6839F1
@@ -296,9 +244,7 @@ $EndComp
 Wire Wire Line
 	4900 3400 4900 3200
 Wire Wire Line
-	4900 3200 5400 3200
-Wire Wire Line
-	4900 3600 5400 3600
+	4900 3600 5300 3600
 Entry Wire Line
 	4050 2050 4150 2150
 Wire Wire Line
@@ -343,9 +289,7 @@ $EndComp
 Wire Wire Line
 	3500 4250 4500 4250
 Wire Wire Line
-	4900 4350 5400 4350
-Wire Wire Line
-	4900 3950 5400 3950
+	4900 4350 5300 4350
 Wire Wire Line
 	4900 4150 4900 3950
 $Comp
@@ -358,17 +302,6 @@ F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 4700 4250 50  0001 C CNN
 F 3 "~" H 4700 4250 50  0001 C CNN
 	1    4700 4250
 	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:IRF3205 Q-F2
-U 1 1 5D6462F9
-P 5500 4150
-F 0 "Q-F2" H 5706 4196 50  0000 L CNN
-F 1 "IRF3205" H 5706 4105 50  0000 L CNN
-F 2 "footprints:TO-220-3_Vertical" H 5750 4075 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 5500 4150 50  0001 L CNN
-	1    5500 4150
-	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	3500 5100 3800 5100
@@ -386,9 +319,7 @@ $EndComp
 Wire Wire Line
 	3500 5000 4500 5000
 Wire Wire Line
-	4900 5100 5400 5100
-Wire Wire Line
-	4900 4700 5400 4700
+	4900 5100 5300 5100
 Wire Wire Line
 	4900 4900 4900 4700
 $Comp
@@ -401,17 +332,6 @@ F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 4700 5000 50  0001 C CNN
 F 3 "~" H 4700 5000 50  0001 C CNN
 	1    4700 5000
 	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:IRF3205 Q-F3
-U 1 1 5D65CBA0
-P 5500 4900
-F 0 "Q-F3" H 5706 4946 50  0000 L CNN
-F 1 "IRF3205" H 5706 4855 50  0000 L CNN
-F 2 "footprints:TO-220-3_Vertical" H 5750 4825 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 5500 4900 50  0001 L CNN
-	1    5500 4900
-	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	3500 5850 3800 5850
@@ -429,9 +349,7 @@ $EndComp
 Wire Wire Line
 	3500 5750 4500 5750
 Wire Wire Line
-	4900 5850 5400 5850
-Wire Wire Line
-	4900 5450 5400 5450
+	4900 5850 5300 5850
 Wire Wire Line
 	4900 5650 4900 5450
 $Comp
@@ -444,17 +362,6 @@ F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 4700 5750 50  0001 C CNN
 F 3 "~" H 4700 5750 50  0001 C CNN
 	1    4700 5750
 	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:IRF3205 Q-F4
-U 1 1 5D660D95
-P 5500 5650
-F 0 "Q-F4" H 5706 5696 50  0000 L CNN
-F 1 "IRF3205" H 5706 5605 50  0000 L CNN
-F 2 "footprints:TO-220-3_Vertical" H 5750 5575 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 5500 5650 50  0001 L CNN
-	1    5500 5650
-	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	3500 6600 3800 6600
@@ -472,9 +379,7 @@ $EndComp
 Wire Wire Line
 	3500 6500 4500 6500
 Wire Wire Line
-	4900 6600 5400 6600
-Wire Wire Line
-	4900 6200 5400 6200
+	4900 6600 5300 6600
 Wire Wire Line
 	4900 6400 4900 6200
 $Comp
@@ -487,17 +392,6 @@ F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 4700 6500 50  0001 C CNN
 F 3 "~" H 4700 6500 50  0001 C CNN
 	1    4700 6500
 	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_FET:IRF3205 Q-F5
-U 1 1 5D66566D
-P 5500 6400
-F 0 "Q-F5" H 5706 6446 50  0000 L CNN
-F 1 "IRF3205" H 5706 6355 50  0000 L CNN
-F 2 "footprints:TO-220-3_Vertical" H 5750 6325 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 5500 6400 50  0001 L CNN
-	1    5500 6400
-	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	3800 4350 3800 5100
@@ -512,8 +406,6 @@ Wire Wire Line
 	7000 3550 5700 3550
 Wire Wire Line
 	5700 3550 5700 3400
-Wire Wire Line
-	5700 4150 5700 3750
 Wire Wire Line
 	5700 3750 7000 3750
 Wire Wire Line
@@ -536,8 +428,6 @@ Wire Wire Line
 	6000 4400 6000 6400
 Wire Wire Line
 	6000 6400 5700 6400
-Wire Wire Line
-	5800 1800 5800 3050
 Wire Bus Line
 	4150 2150 4150 2250
 Wire Wire Line
@@ -571,49 +461,28 @@ Wire Wire Line
 	5700 6800 5700 6400
 Wire Wire Line
 	3500 6800 5700 6800
-Connection ~ 5700 6400
 Wire Wire Line
 	5700 6050 5700 5650
 Wire Wire Line
 	3500 6050 5700 6050
-Connection ~ 5700 5650
 Wire Wire Line
 	5700 5300 5700 4900
 Wire Wire Line
 	3500 5300 5700 5300
-Connection ~ 5700 4900
-Wire Wire Line
-	5700 4550 5700 4150
 Wire Wire Line
 	3500 4550 5700 4550
-Connection ~ 5700 4150
-Wire Wire Line
-	5400 3200 5600 3200
 Wire Wire Line
 	5600 3200 5600 3300
 Wire Wire Line
 	5600 3300 6500 3300
 Wire Wire Line
 	6500 3300 6500 3950
-Wire Wire Line
-	6500 6200 5400 6200
-Connection ~ 5400 3200
-Connection ~ 5400 6200
-Wire Wire Line
-	5400 5450 6500 5450
-Connection ~ 5400 5450
 Connection ~ 6500 5450
 Wire Wire Line
 	6500 5450 6500 6200
-Wire Wire Line
-	5400 4700 6500 4700
-Connection ~ 5400 4700
 Connection ~ 6500 4700
 Wire Wire Line
 	6500 4700 6500 5450
-Wire Wire Line
-	5400 3950 6500 3950
-Connection ~ 5400 3950
 Connection ~ 6500 3950
 Wire Wire Line
 	6500 3950 6500 4700
@@ -621,14 +490,8 @@ Wire Wire Line
 	6500 3300 6900 3300
 Wire Wire Line
 	6900 3300 6900 3250
-Wire Wire Line
-	5700 1800 5700 3150
-Wire Bus Line
-	4150 2150 7850 2150
 Connection ~ 6500 3300
 Connection ~ 6900 3300
-Wire Wire Line
-	6900 3300 6900 3250
 Text Label 4000 3500 0    50   ~ 0
 F1-GND
 Text Label 4000 4250 0    50   ~ 0
@@ -649,4 +512,120 @@ Text Label 5000 5850 0    50   ~ 0
 F4-12V
 Text Label 5000 6600 0    50   ~ 0
 F5-12V
+$Comp
+L Device:Q_NMOS_GDSD Q-F1
+U 1 1 5D63AC17
+P 5500 3400
+F 0 "Q-F1" H 5788 3354 50  0000 L CNN
+F 1 "Q_NMOS_GDSD" H 5788 3445 50  0000 L CNN
+F 2 "footprints:SOT-223" H 5700 3500 50  0001 C CNN
+F 3 "~" H 5500 3400 50  0001 C CNN
+	1    5500 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Q_NMOS_GDSD Q-F2
+U 1 1 5D63F451
+P 5500 4150
+F 0 "Q-F2" H 5788 4104 50  0000 L CNN
+F 1 "Q_NMOS_GDSD" H 5788 4195 50  0000 L CNN
+F 2 "footprints:SOT-223" H 5700 4250 50  0001 C CNN
+F 3 "~" H 5500 4150 50  0001 C CNN
+	1    5500 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Q_NMOS_GDSD Q-F3
+U 1 1 5D63FBDA
+P 5500 4900
+F 0 "Q-F3" H 5788 4854 50  0000 L CNN
+F 1 "Q_NMOS_GDSD" H 5788 4945 50  0000 L CNN
+F 2 "footprints:SOT-223" H 5700 5000 50  0001 C CNN
+F 3 "~" H 5500 4900 50  0001 C CNN
+	1    5500 4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Q_NMOS_GDSD Q-F5
+U 1 1 5D640575
+P 5500 6400
+F 0 "Q-F5" H 5788 6354 50  0000 L CNN
+F 1 "Q_NMOS_GDSD" H 5788 6445 50  0000 L CNN
+F 2 "footprints:SOT-223" H 5700 6500 50  0001 C CNN
+F 3 "~" H 5500 6400 50  0001 C CNN
+	1    5500 6400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Q_NMOS_GDSD Q-F4
+U 1 1 5D640E16
+P 5500 5650
+F 0 "Q-F4" H 5788 5604 50  0000 L CNN
+F 1 "Q_NMOS_GDSD" H 5788 5695 50  0000 L CNN
+F 2 "footprints:SOT-223" H 5700 5750 50  0001 C CNN
+F 3 "~" H 5500 5650 50  0001 C CNN
+	1    5500 5650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 3200 5400 3200
+Wire Wire Line
+	5700 3750 5700 4150
+Wire Wire Line
+	4900 3950 5400 3950
+Wire Wire Line
+	4900 4700 5400 4700
+Wire Wire Line
+	4900 5450 5400 5450
+Wire Wire Line
+	4900 6200 5400 6200
+Connection ~ 5400 3200
+Wire Wire Line
+	5400 3200 5600 3200
+Connection ~ 5700 4150
+Wire Wire Line
+	5700 4150 5700 4550
+Connection ~ 5400 3950
+Wire Wire Line
+	5400 3950 6500 3950
+Connection ~ 5700 5650
+Connection ~ 5400 5450
+Wire Wire Line
+	5400 5450 6500 5450
+Connection ~ 5700 6400
+Connection ~ 5400 6200
+Wire Wire Line
+	5400 6200 6500 6200
+Wire Wire Line
+	5400 6600 5300 6600
+Connection ~ 5300 6600
+Wire Wire Line
+	5300 5850 5400 5850
+Connection ~ 5300 5850
+Connection ~ 5700 4900
+Connection ~ 5400 4700
+Wire Wire Line
+	5400 4700 6500 4700
+Wire Wire Line
+	5400 5100 5300 5100
+Connection ~ 5300 5100
+Wire Wire Line
+	5300 4350 5400 4350
+Connection ~ 5300 4350
+Wire Wire Line
+	5300 3600 5400 3600
+Connection ~ 5300 3600
+NoConn ~ 3500 3700
+NoConn ~ 3500 4450
+NoConn ~ 3500 5200
+NoConn ~ 3500 5950
+NoConn ~ 3500 6700
+NoConn ~ 7000 3450
+NoConn ~ 7000 3650
+NoConn ~ 7000 3950
+NoConn ~ 7000 4050
+NoConn ~ 7000 3050
+NoConn ~ 7000 3150
+Wire Bus Line
+	4150 2150 7850 2150
 $EndSCHEMATC
