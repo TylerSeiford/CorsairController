@@ -995,7 +995,7 @@
       (net 1 GND))
   )
 
-  (gr_text "Corsair\nController\nv 0.1.8" (at 134.112 152.4) (layer F.SilkS)
+  (gr_text "Corsair\nController\nv 0.1.9" (at 134.112 152.4) (layer F.SilkS)
     (effects (font (size 1.27 1.27) (thickness 0.254)))
   )
   (gr_line (start 104.14 71.12) (end 164.592 71.12) (layer Edge.Cuts) (width 0.1))
