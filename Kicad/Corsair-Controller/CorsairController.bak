@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:CorsairController-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -23,6 +24,17 @@ F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 3600 5600 50  0001 C CNN
 F 3 "~" H 3600 5600 50  0001 C CNN
 	1    3600 5600
 	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J-PWR1
+U 1 1 5D3A5580
+P 6900 1600
+F 0 "J-PWR1" V 6750 1500 50  0000 L CNN
+F 1 "Conn_01x03_Male" V 6850 1500 50  0000 L CNN
+F 2 "footprints:Molex-Screw" H 6900 1600 50  0001 C CNN
+F 3 "~" H 6900 1600 50  0001 C CNN
+	1    6900 1600
+	0    1    1    0   
 $EndComp
 $Comp
 L Connector:Conn_01x04_Male J-RGB1
@@ -54,18 +66,18 @@ Text Label 3850 4250 0    50   ~ 0
 12V
 Text Label 3850 3400 0    50   ~ 0
 12V
-Text Label 5750 2150 0    50   ~ 0
+Text Label 6200 2150 0    50   ~ 0
 POWER_BUS
 Entry Wire Line
 	4050 4500 4150 4600
-Text Label 6600 2050 1    50   ~ 0
+Text Label 7000 2050 1    50   ~ 0
 12V
 Text Label 6900 2050 1    50   ~ 0
 5V
 Text Label 6800 1900 3    50   ~ 0
 GND
 Entry Wire Line
-	6600 2050 6700 2150
+	7000 2050 7100 2150
 Entry Wire Line
 	6900 2050 7000 2150
 Entry Wire Line
@@ -95,7 +107,7 @@ Entry Wire Line
 Entry Wire Line
 	4050 5700 4150 5800
 Wire Wire Line
-	6600 2050 6600 1800
+	7000 2050 7000 1800
 Wire Wire Line
 	6900 2050 6900 1800
 Wire Wire Line
@@ -307,7 +319,7 @@ L power:PWR_FLAG #FLG0101
 U 1 1 5D4AC0F2
 P 7750 1800
 F 0 "#FLG0101" H 7750 1875 50  0001 C CNN
-F 1 "PWR_FLAG" H 8000 1850 50  0000 C CNN
+F 1 "PWR_FLAG" H 7750 1973 50  0000 C CNN
 F 2 "" H 7750 1800 50  0001 C CNN
 F 3 "~" H 7750 1800 50  0001 C CNN
 	1    7750 1800
@@ -394,7 +406,7 @@ L power:PWR_FLAG #FLG0103
 U 1 1 5D4B5915
 P 7550 1800
 F 0 "#FLG0103" H 7550 1875 50  0001 C CNN
-F 1 "PWR_FLAG" H 7300 1850 50  0000 C CNN
+F 1 "PWR_FLAG" H 7550 1973 50  0000 C CNN
 F 2 "" H 7550 1800 50  0001 C CNN
 F 3 "~" H 7550 1800 50  0001 C CNN
 	1    7550 1800
@@ -680,19 +692,6 @@ Connection ~ 5900 4900
 Wire Wire Line
 	7000 4250 6900 4250
 Connection ~ 6900 4250
-$Comp
-L Connector:Conn_01x04_Female J-PWR1
-U 1 1 5D6997BE
-P 6700 1600
-F 0 "J-PWR1" V 6750 1700 50  0000 R CNN
-F 1 "Conn_01x04_Female" V 6850 1950 50  0000 R CNN
-F 2 "footprints:Molex" H 6700 1600 50  0001 C CNN
-F 3 "~" H 6700 1600 50  0001 C CNN
-	1    6700 1600
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6700 1800 6800 1800
 Wire Wire Line
 	3800 6550 4250 6550
 Wire Wire Line
@@ -717,5 +716,4 @@ Wire Bus Line
 	4150 2150 7850 2150
 Wire Bus Line
 	4150 2150 4150 6850
-Connection ~ 6800 1800
 $EndSCHEMATC
