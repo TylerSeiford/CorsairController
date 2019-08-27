@@ -37,17 +37,6 @@ F 3 "~" H 6900 1600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Conn_01x05_Male J-UART1
-U 1 1 5D3A7894
-P 5800 1600
-F 0 "J-UART1" V 5650 1400 50  0000 L CNN
-F 1 "Conn_01x05_Male" V 5750 1400 50  0000 L CNN
-F 2 "footprints:PinHeader_1x05_P2.54mm_Vertical" H 5800 1600 50  0001 C CNN
-F 3 "~" H 5800 1600 50  0001 C CNN
-	1    5800 1600
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:Conn_01x04_Male J-RGB1
 U 1 1 5D3AD15A
 P 3600 4600
@@ -117,38 +106,12 @@ Entry Wire Line
 	4050 5500 4150 5600
 Entry Wire Line
 	4050 5700 4150 5800
-Text Label 5600 1900 3    50   ~ 0
-GND
 Wire Wire Line
 	7000 2050 7000 1800
 Wire Wire Line
 	6900 2050 6900 1800
 Wire Wire Line
 	6800 2050 6800 1800
-Wire Wire Line
-	5600 1800 5600 2050
-Wire Wire Line
-	5900 1800 5900 2050
-Wire Wire Line
-	6000 1800 6000 2050
-Text Label 5900 2050 1    50   ~ 0
-5V
-Text Label 6000 2050 1    50   ~ 0
-12V
-Entry Wire Line
-	6000 2050 6100 2150
-Entry Wire Line
-	5900 2050 6000 2150
-Entry Wire Line
-	5600 2050 5700 2150
-Text Label 5700 2050 1    50   ~ 0
-RX
-Text Label 5800 2050 1    50   ~ 0
-TX
-Text Label 9400 3050 0    50   ~ 0
-TX
-Text Label 9400 3150 0    50   ~ 0
-RX
 Text Label 3850 5100 0    50   ~ 0
 A1
 Text Label 3850 5600 0    50   ~ 0
@@ -197,8 +160,6 @@ Wire Wire Line
 	9700 4150 9050 4150
 Wire Wire Line
 	9700 4050 9150 4050
-Wire Wire Line
-	9700 3050 9350 3050
 $Comp
 L SparkFun-Boards:PRO_MICRO U1
 U 1 1 5D3B1525
@@ -475,18 +436,6 @@ Wire Wire Line
 	4350 6100 4350 5100
 Wire Wire Line
 	8750 3650 9700 3650
-Wire Wire Line
-	9350 3050 9350 2450
-Wire Wire Line
-	9350 2450 5800 2450
-Wire Wire Line
-	5800 1800 5800 2450
-Wire Wire Line
-	9250 3150 9250 2550
-Wire Wire Line
-	9250 2550 5700 2550
-Wire Wire Line
-	9250 3150 9700 3150
 Entry Wire Line
 	4850 4350 4950 4450
 Entry Wire Line
@@ -742,6 +691,7 @@ Wire Wire Line
 Connection ~ 5900 4900
 Wire Wire Line
 	7000 4250 6900 4250
+Connection ~ 6900 4250
 Wire Wire Line
 	3800 6550 4250 6550
 Wire Wire Line
@@ -752,8 +702,6 @@ Wire Bus Line
 	7850 2150 7850 3950
 Wire Bus Line
 	7700 2800 7700 4150
-Wire Wire Line
-	5700 1800 5700 2550
 Wire Wire Line
 	3800 5600 4250 5600
 Wire Wire Line
@@ -768,5 +716,4 @@ Wire Bus Line
 	4150 2150 7850 2150
 Wire Bus Line
 	4150 2150 4150 6850
-Connection ~ 6900 4250
 $EndSCHEMATC

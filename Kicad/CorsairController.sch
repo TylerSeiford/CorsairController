@@ -31,7 +31,7 @@ U 1 1 5D3A5580
 P 6900 1600
 F 0 "J-PWR1" V 6750 1500 50  0000 L CNN
 F 1 "Conn_01x03_Male" V 6850 1500 50  0000 L CNN
-F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 6900 1600 50  0001 C CNN
+F 2 "footprints:Molex-Screw" H 6900 1600 50  0001 C CNN
 F 3 "~" H 6900 1600 50  0001 C CNN
 	1    6900 1600
 	0    1    1    0   
