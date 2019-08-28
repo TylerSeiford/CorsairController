@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:CorsairController-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -199,10 +200,10 @@ F2-T
 Text Label 9400 3950 0    50   ~ 0
 F1-T
 $Comp
-L Switch:SW_SPDT SW1
+L Switch:SW_SPDT SW-F1
 U 1 1 5D3C73AF
 P 6150 3300
-F 0 "SW1" H 6050 3400 50  0000 C CNN
+F 0 "SW-F1" H 6050 3400 50  0000 C CNN
 F 1 "SW_SPDT" H 6150 3494 50  0000 C CNN
 F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 6150 3300 50  0001 C CNN
 F 3 "~" H 6150 3300 50  0001 C CNN
@@ -210,10 +211,10 @@ F 3 "~" H 6150 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_SPDT SW2
+L Switch:SW_SPDT SW-F2
 U 1 1 5D3CA2AB
 P 6150 4150
-F 0 "SW2" H 6050 4250 50  0000 C CNN
+F 0 "SW-F2" H 6050 4250 50  0000 C CNN
 F 1 "SW_SPDT" H 6150 4344 50  0000 C CNN
 F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 6150 4150 50  0001 C CNN
 F 3 "~" H 6150 4150 50  0001 C CNN
@@ -277,10 +278,10 @@ Wire Wire Line
 Wire Wire Line
 	6350 3200 6350 3000
 $Comp
-L Switch:SW_Push_Dual SW3
+L Switch:SW_Push_Dual SW1
 U 1 1 5D47FE3D
 P 10150 2150
-F 0 "SW3" H 10150 2435 50  0000 C CNN
+F 0 "SW1" H 10150 2435 50  0000 C CNN
 F 1 "SW_Push" H 10150 2344 50  0000 C CNN
 F 2 "footprints:ESE-20C423" H 10150 2350 50  0001 C CNN
 F 3 "~" H 10150 2350 50  0001 C CNN
@@ -693,6 +694,7 @@ F 3 "~" H 6700 1600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6700 1800 6800 1800
+Connection ~ 6800 1800
 Wire Wire Line
 	3800 6550 4250 6550
 Wire Wire Line
@@ -717,5 +719,4 @@ Wire Bus Line
 	4150 2150 7850 2150
 Wire Bus Line
 	4150 2150 4150 6850
-Connection ~ 6800 1800
 $EndSCHEMATC
