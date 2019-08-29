@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:CorsairController-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -681,23 +682,10 @@ F 3 "~" H 9950 3750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8200 2350 6900 2350
-NoConn ~ 8400 2550
-NoConn ~ 8400 2950
-$Comp
-L Switch:SW_Push_Dual SW1
-U 1 1 5D47FE3D
-P 8400 2750
-F 0 "SW1" H 8400 3035 50  0000 C CNN
-F 1 "SW_Push" H 8400 2944 50  0000 C CNN
-F 2 "footprints:ESE-20C423" H 8400 2950 50  0001 C CNN
-F 3 "~" H 8400 2950 50  0001 C CNN
-	1    8400 2750
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8200 3250 8200 2950
 Wire Wire Line
-	8200 2350 8200 2550
+	8200 2350 8200 2450
 Entry Wire Line
 	9500 2750 9600 2850
 Wire Wire Line
@@ -798,10 +786,6 @@ Text Label 8000 3750 0    50   ~ 0
 T1
 Wire Wire Line
 	6700 1800 6800 1800
-Wire Bus Line
-	9500 2150 9500 2850
-Wire Bus Line
-	4150 2150 9500 2150
 $Comp
 L Connector:Conn_01x04_Female J-PWR1
 U 1 1 5D670F31
@@ -814,4 +798,25 @@ F 3 "~" H 6700 1600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Connection ~ 6800 1800
+$Comp
+L Symbols:RESET_SWITCH SW1
+U 1 1 5D690D98
+P 8200 2700
+F 0 "SW1" V 8246 2472 50  0000 R CNN
+F 1 "RESET_SWITCH" V 8155 2472 50  0000 R CNN
+F 2 "footprints:Reset_Button" H 8200 2700 50  0001 C CNN
+F 3 "" H 8200 2700 50  0001 C CNN
+	1    8200 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8350 2450 8200 2450
+Connection ~ 8200 2450
+Wire Wire Line
+	8200 2950 8350 2950
+Wire Bus Line
+	9500 2150 9500 2850
+Wire Bus Line
+	4150 2150 9500 2150
+Connection ~ 8200 2950
 $EndSCHEMATC
