@@ -277,17 +277,6 @@ Wire Wire Line
 	6350 3850 6350 4050
 Wire Wire Line
 	6350 3200 6350 3000
-$Comp
-L Switch:SW_Push_Dual SW1
-U 1 1 5D47FE3D
-P 10150 2150
-F 0 "SW1" H 10150 2435 50  0000 C CNN
-F 1 "SW_Push" H 10150 2344 50  0000 C CNN
-F 2 "footprints:ESE-20C423" H 10150 2350 50  0001 C CNN
-F 3 "~" H 10150 2350 50  0001 C CNN
-	1    10150 2150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10700 2350 10700 3250
 Wire Wire Line
@@ -333,8 +322,6 @@ Text Label 7550 2050 1    50   ~ 0
 12V
 Text Label 7750 2050 1    50   ~ 0
 GND
-NoConn ~ 10350 2150
-NoConn ~ 9950 2150
 Text Label 6350 3400 0    50   ~ 0
 F1-12V
 Text Label 6350 4250 0    50   ~ 0
@@ -584,8 +571,6 @@ Wire Wire Line
 	3800 4250 4050 4250
 Wire Wire Line
 	4850 4250 3800 4350
-Wire Wire Line
-	9950 2350 9600 2350
 Connection ~ 9600 2350
 Wire Wire Line
 	9600 2350 9600 2450
@@ -695,6 +680,24 @@ $EndComp
 Wire Wire Line
 	6700 1800 6800 1800
 Connection ~ 6800 1800
+$Comp
+L Symbols:RESET_SWITCH SW1
+U 1 1 5D67B3A7
+P 10100 2200
+F 0 "SW1" H 10100 2425 50  0000 C CNN
+F 1 "RESET_SWITCH" H 10100 2334 50  0000 C CNN
+F 2 "footprints:Reset_Button" H 10100 2200 50  0001 C CNN
+F 3 "" H 10100 2200 50  0001 C CNN
+	1    10100 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 2350 9600 2350
+Wire Wire Line
+	10350 2200 10350 2350
+Connection ~ 10350 2350
+Wire Wire Line
+	9850 2350 9850 2200
 Wire Wire Line
 	3800 6550 4250 6550
 Wire Wire Line
@@ -719,4 +722,5 @@ Wire Bus Line
 	4150 2150 7850 2150
 Wire Bus Line
 	4150 2150 4150 6850
+Connection ~ 9850 2350
 $EndSCHEMATC
