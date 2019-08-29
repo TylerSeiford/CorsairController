@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:CorsairController-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -42,7 +41,7 @@ U 1 1 5D3AE865
 P 3600 3400
 F 0 "J-F1" H 3500 3250 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 3250 3350 50  0000 C CNN
-F 2 "footprints:FanPinHeader_1x04_P2.54mm_Vertical" H 3600 3400 50  0001 C CNN
+F 2 "footprints:0470531000" H 3600 3400 50  0001 C CNN
 F 3 "~" H 3600 3400 50  0001 C CNN
 	1    3600 3400
 	1    0    0    -1  
@@ -227,7 +226,7 @@ U 1 1 5D3AAAFE
 P 3600 4250
 F 0 "J-F2" H 3500 4100 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 3250 4200 50  0000 C CNN
-F 2 "footprints:FanPinHeader_1x04_P2.54mm_Vertical" H 3600 4250 50  0001 C CNN
+F 2 "footprints:0470531000" H 3600 4250 50  0001 C CNN
 F 3 "~" H 3600 4250 50  0001 C CNN
 	1    3600 4250
 	1    0    0    -1  
@@ -672,7 +671,7 @@ U 1 1 5D6997BE
 P 6700 1600
 F 0 "J-PWR1" V 6750 1700 50  0000 R CNN
 F 1 "Conn_01x04_Female" V 6850 1950 50  0000 R CNN
-F 2 "footprints:Molex" H 6700 1600 50  0001 C CNN
+F 2 "footprints:641737-1" H 6700 1600 50  0001 C CNN
 F 3 "~" H 6700 1600 50  0001 C CNN
 	1    6700 1600
 	0    -1   -1   0   
@@ -686,7 +685,7 @@ U 1 1 5D67B3A7
 P 10100 2200
 F 0 "SW1" H 10100 2425 50  0000 C CNN
 F 1 "RESET_SWITCH" H 10100 2334 50  0000 C CNN
-F 2 "footprints:Reset_Button" H 10100 2200 50  0001 C CNN
+F 2 "footprints:PTS_647_SM38_SMTR2_LFS" H 10100 2200 50  0001 C CNN
 F 3 "" H 10100 2200 50  0001 C CNN
 	1    10100 2200
 	1    0    0    -1  
@@ -698,6 +697,7 @@ Wire Wire Line
 Connection ~ 10350 2350
 Wire Wire Line
 	9850 2350 9850 2200
+Connection ~ 9850 2350
 Wire Wire Line
 	3800 6550 4250 6550
 Wire Wire Line
@@ -722,5 +722,4 @@ Wire Bus Line
 	4150 2150 7850 2150
 Wire Bus Line
 	4150 2150 4150 6850
-Connection ~ 9850 2350
 $EndSCHEMATC
