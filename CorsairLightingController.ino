@@ -23,8 +23,8 @@ void setup() {
 
 	cp = new CommanderPro<LEDS_PER_CHANNEL>(true);
 
-	FastLED.addLeds<LED_CHIPSET_1, CHANNEL_2, LED_ORDER_1>(cp->channel2, LEDS_PER_CHANNEL);
-	FastLED.addLeds<LED_CHIPSET_2, CHANNEL_1, LED_ORDER_2>(cp->channel1, LEDS_PER_CHANNEL);
+	FastLED.addLeds<LED_CHIPSET_1, CHANNEL_1, LED_ORDER_1>(cp->channel1, LEDS_PER_CHANNEL);
+	FastLED.addLeds<LED_CHIPSET_2, CHANNEL_2, LED_ORDER_2>(cp->channel2, LEDS_PER_CHANNEL);
 
 	pinMode(RGB_1, OUTPUT);
 	pinMode(RGB_2, OUTPUT);
