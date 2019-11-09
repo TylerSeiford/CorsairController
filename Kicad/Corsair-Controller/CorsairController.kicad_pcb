@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 5)
+    (drawings 6)
     (tracks 180)
     (zones 0)
     (modules 21)
@@ -986,7 +986,10 @@
       (net 1 GND))
   )
 
-  (gr_text "Corsair\nController\nv 0.1.11" (at 118.872 152.654) (layer F.SilkS)
+  (gr_text "Corsair\nController\nv 0.2.0" (at 142.24 86.36) (layer B.SilkS) (tstamp 5DC6DF03)
+    (effects (font (size 2.5 2.5) (thickness 0.5)) (justify mirror))
+  )
+  (gr_text "Corsair\nController\nv 0.2.0" (at 118.872 152.654) (layer F.SilkS)
     (effects (font (size 1.27 1.27) (thickness 0.254)))
   )
   (gr_line (start 104.14 71.628) (end 164.592 71.628) (layer Edge.Cuts) (width 0.1))
