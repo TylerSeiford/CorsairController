@@ -1333,7 +1333,7 @@
   )
 
   (gr_text "Fan\nController\nv 0.0.8" (at 147.447 134.62) (layer F.SilkS)
-    (effects (font (size 1.5 1.5) (thickness 0.25)))
+    (effects (font (size 1.75 1.75) (thickness 0.375)))
   )
   (gr_line (start 104.14 71.12) (end 164.592 71.12) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 104.14 157.48) (end 104.14 71.12) (layer Edge.Cuts) (width 0.1))
