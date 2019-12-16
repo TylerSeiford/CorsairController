@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:CorsairController-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,6 +15,17 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
+L Connector:Conn_01x03_Male J-A2
+U 1 1 5D3A2B22
+P 1250 3650
+F 0 "J-A2" H 1250 3600 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 1250 3700 50  0000 R CNN
+F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 1250 3650 50  0001 C CNN
+F 3 "~" H 1250 3650 50  0001 C CNN
+	1    1250 3650
+	1    0    0    -1  
+$EndComp
+$Comp
 L Connector:Conn_01x04_Male J-RGB1
 U 1 1 5D3AD15A
 P 3800 5800
@@ -28,12 +39,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x04_Male J-F1
 U 1 1 5D3AE865
-P 4450 6850
-F 0 "J-F1" H 4350 6700 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 4100 6800 50  0000 C CNN
-F 2 "footprints:0470531000" H 4450 6850 50  0001 C CNN
-F 3 "~" H 4450 6850 50  0001 C CNN
-	1    4450 6850
+P 4550 6850
+F 0 "J-F1" H 4450 6700 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 4200 6800 50  0000 C CNN
+F 2 "footprints:0470531000" H 4550 6850 50  0001 C CNN
+F 3 "~" H 4550 6850 50  0001 C CNN
+	1    4550 6850
 	1    0    0    -1  
 $EndComp
 Text Label 4000 5700 0    50   ~ 0
@@ -48,6 +59,18 @@ Text Label 2450 2950 0    50   ~ 0
 5V
 Text Label 2450 3150 0    50   ~ 0
 GND
+Text Label 1450 3750 0    50   ~ 0
+GND
+Text Label 1450 3350 0    50   ~ 0
+GND
+Text Label 1450 3550 0    50   ~ 0
+12V
+Text Label 1450 3150 0    50   ~ 0
+12V
+Text Label 1450 3250 0    50   ~ 0
+A1
+Text Label 1450 3650 0    50   ~ 0
+A2
 Text Label 1050 3950 0    50   ~ 0
 A1
 Text Label 1050 4450 0    50   ~ 0
@@ -64,6 +87,10 @@ Text Label 4000 5900 0    50   ~ 0
 G-12V
 Text Label 4000 6000 0    50   ~ 0
 B-12V
+Text Label 2950 5300 2    50   ~ 0
+R-5V
+Text Label 2950 5800 2    50   ~ 0
+G-5V
 Text Label 2500 5300 0    50   ~ 0
 R-5V
 Text Label 2500 5800 0    50   ~ 0
@@ -74,9 +101,13 @@ Text Label 3250 6950 0    50   ~ 0
 F1-5V
 Text Label 3250 7450 0    50   ~ 0
 F2-5V
-Text Label 3350 7550 0    50   ~ 0
+Text Label 3250 7650 0    50   ~ 0
+F2-5V
+Text Label 3250 7150 0    50   ~ 0
+F1-5V
+Text Label 3250 7550 0    50   ~ 0
 F2-T
-Text Label 3350 7050 0    50   ~ 0
+Text Label 3250 7050 0    50   ~ 0
 F1-T
 $Comp
 L Switch:SW_SPDT SW-F1
@@ -103,12 +134,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x04_Male J-F2
 U 1 1 5D3AAAFE
-P 4450 7350
-F 0 "J-F2" H 4350 7200 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 4100 7300 50  0000 C CNN
-F 2 "footprints:0470531000" H 4450 7350 50  0001 C CNN
-F 3 "~" H 4450 7350 50  0001 C CNN
-	1    4450 7350
+P 4550 7350
+F 0 "J-F2" H 4450 7200 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 4200 7300 50  0000 C CNN
+F 2 "footprints:0470531000" H 4550 7350 50  0001 C CNN
+F 3 "~" H 4550 7350 50  0001 C CNN
+	1    4550 7350
 	1    0    0    -1  
 $EndComp
 Text Label 4750 7250 0    50   ~ 0
@@ -137,6 +168,17 @@ Text Label 1350 7650 0    50   ~ 0
 F2-12V
 Text Label 2450 3600 0    50   ~ 0
 RESET
+$Comp
+L Connector:Conn_01x03_Male J-A1
+U 1 1 5D3A4B03
+P 1250 3250
+F 0 "J-A1" H 1250 3200 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 1250 3300 50  0000 R CNN
+F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 1250 3250 50  0001 C CNN
+F 3 "~" H 1250 3250 50  0001 C CNN
+	1    1250 3250
+	1    0    0    -1  
+$EndComp
 $Comp
 L Connector:Conn_01x04_Male J-ARGB1
 U 1 1 5D54F115
@@ -393,7 +435,7 @@ U 1 1 5E075994
 P 2150 6300
 F 0 "R-B1" V 1943 6300 50  0000 C CNN
 F 1 "10" V 2034 6300 50  0000 C CNN
-F 2 "footprints:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2080 6300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2080 6300 50  0001 C CNN
 F 3 "~" H 2150 6300 50  0001 C CNN
 	1    2150 6300
 	0    1    1    0   
@@ -404,7 +446,7 @@ U 1 1 5E079341
 P 2150 5300
 F 0 "R-R1" V 1943 5300 50  0000 C CNN
 F 1 "10" V 2034 5300 50  0000 C CNN
-F 2 "footprints:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2080 5300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2080 5300 50  0001 C CNN
 F 3 "~" H 2150 5300 50  0001 C CNN
 	1    2150 5300
 	0    1    1    0   
@@ -412,16 +454,22 @@ $EndComp
 Wire Wire Line
 	1600 5300 2000 5300
 Wire Wire Line
+	2300 5300 2500 5300
+Wire Wire Line
+	2500 5800 2300 5800
+Wire Wire Line
 	2000 5800 1600 5800
 Wire Wire Line
 	1600 6300 2000 6300
+Wire Wire Line
+	2300 6300 2500 6300
 $Comp
 L Device:R R-G1
 U 1 1 5E078EC4
 P 2150 5800
 F 0 "R-G1" V 1943 5800 50  0000 C CNN
 F 1 "10" V 2034 5800 50  0000 C CNN
-F 2 "footprints:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2080 5800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2080 5800 50  0001 C CNN
 F 3 "~" H 2150 5800 50  0001 C CNN
 	1    2150 5800
 	0    1    1    0   
@@ -432,13 +480,17 @@ U 1 1 5E09AD99
 P 2750 7450
 F 0 "R-F2" V 2543 7450 50  0000 C CNN
 F 1 "10" V 2634 7450 50  0000 C CNN
-F 2 "footprints:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2680 7450 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2680 7450 50  0001 C CNN
 F 3 "~" H 2750 7450 50  0001 C CNN
 	1    2750 7450
 	0    1    1    0   
 $EndComp
 Wire Wire Line
 	2400 6950 2600 6950
+Wire Wire Line
+	2900 6950 3250 6950
+Wire Wire Line
+	3250 7450 2900 7450
 Wire Wire Line
 	2600 7450 2400 7450
 $Comp
@@ -447,7 +499,7 @@ U 1 1 5E09A574
 P 2750 6950
 F 0 "R-F1" V 2543 6950 50  0000 C CNN
 F 1 "10" V 2634 6950 50  0000 C CNN
-F 2 "footprints:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2680 6950 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2680 6950 50  0001 C CNN
 F 3 "~" H 2750 6950 50  0001 C CNN
 	1    2750 6950
 	0    1    1    0   
@@ -482,17 +534,17 @@ Text GLabel 2700 3050 2    50   Input ~ 0
 GND
 Text GLabel 3250 7550 0    50   Input ~ 0
 D2
-Text GLabel 3600 7450 2    50   Input ~ 0
+Text GLabel 3250 7650 0    50   Input ~ 0
 D3
-Text GLabel 950  3950 0    50   Input ~ 0
+Text GLabel 1050 3950 0    50   Input ~ 0
 D4
-Text GLabel 3600 6950 2    50   Input ~ 0
+Text GLabel 3250 7150 0    50   Input ~ 0
 D5
 Text GLabel 2950 5300 2    50   Input ~ 0
 D6
 Text GLabel 3250 7050 0    50   Input ~ 0
 D7
-Text GLabel 950  4450 0    50   Input ~ 0
+Text GLabel 1050 4450 0    50   Input ~ 0
 D8
 Text GLabel 2950 5800 2    50   Input ~ 0
 D9
@@ -500,87 +552,13 @@ Text GLabel 2950 6300 2    50   Input ~ 0
 D13
 Text GLabel 2450 3750 2    50   Input ~ 0
 RESET
+Text Label 2950 6300 2    50   ~ 0
+B-5V
 Wire Wire Line
 	2450 3050 2700 3050
 Connection ~ 2450 3050
+Text GLabel 2700 2950 2    50   Input ~ 0
+VCC
 Wire Wire Line
-	3250 7050 3350 7050
-Wire Wire Line
-	3250 7550 3350 7550
-Wire Wire Line
-	4650 6750 4750 6750
-Wire Wire Line
-	4750 6850 4650 6850
-Wire Wire Line
-	4650 6950 4750 6950
-Wire Wire Line
-	4750 7050 4650 7050
-Wire Wire Line
-	4650 7250 4750 7250
-Wire Wire Line
-	4750 7350 4650 7350
-Wire Wire Line
-	4650 7450 4750 7450
-Wire Wire Line
-	4750 7550 4650 7550
-Wire Wire Line
-	2300 5300 2950 5300
-Wire Wire Line
-	2300 5800 2950 5800
-Wire Wire Line
-	2300 6300 2950 6300
-Wire Wire Line
-	2900 7450 3600 7450
-Wire Wire Line
-	2900 6950 3600 6950
-Text GLabel 7700 4200 2    50   Input ~ 0
-AI0
-Text GLabel 7700 4100 2    50   Input ~ 0
-AI1
-Text GLabel 7700 4000 2    50   Input ~ 0
-AI2
-Text GLabel 7700 3900 2    50   Input ~ 0
-AI3
-Text GLabel 7700 3800 2    50   Input ~ 0
-AI4
-Text GLabel 7700 3700 2    50   Input ~ 0
-AI5
-Text GLabel 7700 2800 2    50   Input ~ 0
-D0
-Text GLabel 7700 2900 2    50   Input ~ 0
-D1
-Text GLabel 7700 3000 2    50   Input ~ 0
-D10
-Text GLabel 7700 3100 2    50   Input ~ 0
-D11
-Text GLabel 7700 3200 2    50   Input ~ 0
-D12
-Text GLabel 7700 3400 2    50   Input ~ 0
-D15
-Text GLabel 7700 3500 2    50   Input ~ 0
-D16
-Text GLabel 7700 3300 2    50   Input ~ 0
-D14
-NoConn ~ 7700 3400
-NoConn ~ 7700 3500
-NoConn ~ 7700 3300
-NoConn ~ 7700 3000
-NoConn ~ 7700 3100
-NoConn ~ 7700 2800
-NoConn ~ 7700 2900
-NoConn ~ 7700 3200
-NoConn ~ 7700 3700
-NoConn ~ 7700 3800
-NoConn ~ 7700 3900
-NoConn ~ 7700 4000
-NoConn ~ 7700 4100
-NoConn ~ 7700 4200
-Text GLabel 2700 3250 2    50   Input ~ 0
-RAW
-Wire Wire Line
-	2450 3250 2700 3250
-Wire Wire Line
-	950  4450 1050 4450
-Wire Wire Line
-	1050 3950 950  3950
+	2450 2950 2700 2950
 $EndSCHEMATC
