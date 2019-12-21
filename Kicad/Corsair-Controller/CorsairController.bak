@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Conn_01x03_Male J-A2
-U 1 1 5D3A2B22
-P 1250 3650
-F 0 "J-A2" H 1250 3600 50  0000 R CNN
-F 1 "Conn_01x03_Male" H 1250 3700 50  0000 R CNN
-F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 1250 3650 50  0001 C CNN
-F 3 "~" H 1250 3650 50  0001 C CNN
-	1    1250 3650
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x04_Male J-RGB1
 U 1 1 5D3AD15A
 P 3800 5800
@@ -59,18 +48,6 @@ Text Label 2450 2950 0    50   ~ 0
 5V
 Text Label 2450 3150 0    50   ~ 0
 GND
-Text Label 1450 3750 0    50   ~ 0
-GND
-Text Label 1450 3350 0    50   ~ 0
-GND
-Text Label 1450 3550 0    50   ~ 0
-12V
-Text Label 1450 3150 0    50   ~ 0
-12V
-Text Label 1450 3250 0    50   ~ 0
-A1
-Text Label 1450 3650 0    50   ~ 0
-A2
 Text Label 1050 3950 0    50   ~ 0
 A1
 Text Label 1050 4450 0    50   ~ 0
@@ -160,17 +137,6 @@ Text Label 1350 7650 0    50   ~ 0
 F2-12V
 Text Label 2450 3600 0    50   ~ 0
 RESET
-$Comp
-L Connector:Conn_01x03_Male J-A1
-U 1 1 5D3A4B03
-P 1250 3250
-F 0 "J-A1" H 1250 3200 50  0000 R CNN
-F 1 "Conn_01x03_Male" H 1250 3300 50  0000 R CNN
-F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 1250 3250 50  0001 C CNN
-F 3 "~" H 1250 3250 50  0001 C CNN
-	1    1250 3250
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector:Conn_01x04_Male J-ARGB1
 U 1 1 5D54F115
