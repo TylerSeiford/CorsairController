@@ -1,5 +1,6 @@
 #include "FakeTemperatureController.h"
 
+
 uint16_t FakeTemperatureController::getVoltageRail12V() {
 	return 12000;
 }

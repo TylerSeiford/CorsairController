@@ -1,5 +1,6 @@
 #pragma once
 
+
 //ARGB setup
 constexpr uint8_t LEDS_PER_CHANNEL = 20;
 	//Number of LEDs per ARGB channel
@@ -19,14 +20,13 @@ constexpr uint8_t LEDS_PER_CHANNEL = 20;
 
 
 //Fan setup
+constexpr uint16_t FAN_UPDATE_RATE = 500;
 constexpr uint8_t F1_MIN = 0;
 constexpr uint8_t F1_MAX = 950;
 	//Min & Max RPMs for Fan1
 constexpr uint8_t F2_MIN = 0;
 constexpr uint8_t F2_MAX = 1500;
 	//Min & Max RPMs for Fan2
-
-
 
 
 // *** FANCY MAGICS FOR RGB SETUP ***

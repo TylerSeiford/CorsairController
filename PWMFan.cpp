@@ -1,14 +1,11 @@
 #include "PWMFan.h"
 
-PWMFan::PWMFan(uint8_t pwmPin, uint16_t minRPM, uint16_t maxRPM) : pwmPin(pwmPin), IFan(minRPM, maxRPM, FAN_MASK_4PIN) {
+
+PWMFan::PWMFan(uint8_t pwmPin, uint16_t minRPM, uint16_t maxRPM) : pwmPin(pwmPin), minRPM(minRPM), maxRPM(maxRPM) {
 	pinMode(pwmPin, OUTPUT);
 	analogWrite(pwmPin, 0);
 	switch (digitalPinToTimer(pwmPin)) {
 		case TIMER0B:/* 3 */
-#ifdef DEBUG
-			Serial.println(F("Pin not supported as PWM fan pin"));
-			Serial.println(F("We don't want to mess up arduino time functions"));
-#endif // DEBUG
 			break;
 		case TIMER3A:/* 5 */
 			TCCR3B = (TCCR3B & 0b11111000) | 0x01;
@@ -24,9 +21,6 @@ PWMFan::PWMFan(uint8_t pwmPin, uint16_t minRPM, uint16_t maxRPM) : pwmPin(pwmPin
 			TCCR1B = (TCCR1B & 0b11111000) | 0x01;
 			break;
 		default:
-	#ifdef DEBUG
-			Serial.println(F("Pin not supported as PWM fan pin"));
-	#endif // DEBUG
 			break;
 	}
 }

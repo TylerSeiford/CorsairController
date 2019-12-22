@@ -3,11 +3,13 @@
 #include "Arduino.h"
 #include "FanController.h"
 #include "TemperatureController.h"
-#include "IFan.h"
+#include "PWMFan.h"
+
 
 #define FAN_CONTROL_MODE_FIXED_POWER 0
 #define FAN_CONTROL_MODE_FIXED_RPM 1
 #define FAN_CONTROL_MODE_CURVE 2
+
 
 struct FanData {
 	uint8_t mode = FAN_CONTROL_MODE_FIXED_POWER;
@@ -18,15 +20,15 @@ struct FanData {
 	FanCurve fanCurve;
 };
 
-// This simple Fan Controller implementation does not implement all features of a Fan Controller.
-// It should only demonstrate how to implement your own Fan Controller.
+
 class SimpleFanController : public FanController {
 public:
 	// Fan Contorller must use the EEPROM else on startup the fans can't be controlled
 	// updateRate it the time between fan speed updates in ms
 	SimpleFanController(TemperatureController* temperatureController, uint16_t updateRate, uint16_t eEPROMAdress);
-	void addFan(uint8_t index, IFan* fan);
+	void addFan(uint8_t index, PWMFan* fan);
 	virtual bool updateFans();
+
 protected:
 	virtual uint16_t getFanSpeed(uint8_t fan) override;
 	virtual void setFanSpeed(uint8_t fan, uint16_t speed) override;
@@ -41,7 +43,7 @@ protected:
 	bool save();
 
 	TemperatureController* const temperatureController;
-	IFan* fans[FAN_NUM] = { NULL };
+	PWMFan* fans[FAN_NUM] = { NULL };
 	bool force3PinMode = false;
 	FanData fanData[FAN_NUM];
 	uint16_t externalTemp[FAN_NUM];
