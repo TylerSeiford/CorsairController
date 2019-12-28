@@ -5,23 +5,23 @@ PWMFan::PWMFan(uint8_t pwmPin, uint16_t minRPM, uint16_t maxRPM) : pwmPin(pwmPin
 	pinMode(pwmPin, OUTPUT);
 	analogWrite(pwmPin, 0);
 	switch (digitalPinToTimer(pwmPin)) {
-		case TIMER0B:/* 3 */
-			break;
-		case TIMER3A:/* 5 */
-			TCCR3B = (TCCR3B & 0b11111000) | 0x01;
-			break;
-		case TIMER4D:/* 6 */
-			//PLLFRQ = (PLLFRQ & B11001111) | (0x03 << PLLTM0);
-			TCCR4B = (TCCR4B & 0b11110000) | 0x01;
-			break;
-		case TIMER1A:/* 9 */
-			TCCR1B = (TCCR1B & 0b11111000) | 0x01;
-			break;
-		case TIMER1B:/* 10 */
-			TCCR1B = (TCCR1B & 0b11111000) | 0x01;
-			break;
-		default:
-			break;
+	case TIMER0B:/* 3 */
+		break;
+	case TIMER3A:/* 5 */
+		TCCR3B = (TCCR3B & 0b11111000) | 0x01;
+		break;
+	case TIMER4D:/* 6 */
+		//PLLFRQ = (PLLFRQ & B11001111) | (0x03 << PLLTM0);
+		TCCR4B = (TCCR4B & 0b11110000) | 0x01;
+		break;
+	case TIMER1A:/* 9 */
+		TCCR1B = (TCCR1B & 0b11111000) | 0x01;
+		break;
+	case TIMER1B:/* 10 */
+		TCCR1B = (TCCR1B & 0b11111000) | 0x01;
+		break;
+	default:
+		break;
 	}
 }
 

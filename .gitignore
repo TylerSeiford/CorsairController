@@ -32,14 +32,14 @@
 *.app
 
 # Others
-.vs/*
-__vm/*
+**/.vs/*
+**/__vm/*
 *.vc*
 *.sln
-Debug/*
-Release/*
+**/Debug/*
+**/Release/*
 **/fp-info-cache
 **/fp-lib-table
 **/sym-lib-table
-Private/*
+**/Private/*
 **/GERBER/**
