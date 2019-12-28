@@ -21,7 +21,7 @@ void SimpleFanController::addFan(uint8_t index, PWMFan* fan) {
 		break;
 	}
 
-	fanData[index].detectionType = FAN_DETECTION_TYPE_AUTO;
+	fanData[index].detectionType = FAN_DETECTION_TYPE_4PIN;
 }
 
 bool SimpleFanController::updateFans() {

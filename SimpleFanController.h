@@ -24,7 +24,7 @@ struct FanData {
 class SimpleFanController : public FanController {
 public:
 	// Fan Contorller must use the EEPROM else on startup the fans can't be controlled
-	// updateRate it the time between fan speed updates in ms
+	// updateRate is the time between fan speed updates in ms
 	SimpleFanController(TemperatureController* temperatureController, uint16_t updateRate, uint16_t eEPROMAdress);
 	void addFan(uint8_t index, PWMFan* fan);
 	virtual bool updateFans();
