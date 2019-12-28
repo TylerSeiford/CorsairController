@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:CorsairController-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -26,17 +25,6 @@ F 3 "~" H 3600 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x03_Male J-PWR1
-U 1 1 5D3A5580
-P 6900 1600
-F 0 "J-PWR1" V 6750 1500 50  0000 L CNN
-F 1 "Conn_01x03_Male" V 6850 1500 50  0000 L CNN
-F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 6900 1600 50  0001 C CNN
-F 3 "~" H 6900 1600 50  0001 C CNN
-	1    6900 1600
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:Conn_01x04_Male J-RGB1
 U 1 1 5D3AD15A
 P 3600 4600
@@ -53,7 +41,7 @@ U 1 1 5D3AE865
 P 3600 3400
 F 0 "J-F1" H 3500 3250 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 3250 3350 50  0000 C CNN
-F 2 "footprints:FanPinHeader_1x04_P2.54mm_Vertical" H 3600 3400 50  0001 C CNN
+F 2 "footprints:0470531000" H 3600 3400 50  0001 C CNN
 F 3 "~" H 3600 3400 50  0001 C CNN
 	1    3600 3400
 	1    0    0    -1  
@@ -66,18 +54,18 @@ Text Label 3850 4250 0    50   ~ 0
 12V
 Text Label 3850 3400 0    50   ~ 0
 12V
-Text Label 6200 2150 0    50   ~ 0
+Text Label 5750 2150 0    50   ~ 0
 POWER_BUS
 Entry Wire Line
 	4050 4500 4150 4600
-Text Label 7000 2050 1    50   ~ 0
+Text Label 6600 2050 1    50   ~ 0
 12V
 Text Label 6900 2050 1    50   ~ 0
 5V
 Text Label 6800 1900 3    50   ~ 0
 GND
 Entry Wire Line
-	7000 2050 7100 2150
+	6600 2050 6700 2150
 Entry Wire Line
 	6900 2050 7000 2150
 Entry Wire Line
@@ -107,7 +95,7 @@ Entry Wire Line
 Entry Wire Line
 	4050 5700 4150 5800
 Wire Wire Line
-	7000 2050 7000 1800
+	6600 2050 6600 1800
 Wire Wire Line
 	6900 2050 6900 1800
 Wire Wire Line
@@ -211,10 +199,10 @@ F2-T
 Text Label 9400 3950 0    50   ~ 0
 F1-T
 $Comp
-L Switch:SW_SPDT SW1
+L Switch:SW_SPDT SW-F1
 U 1 1 5D3C73AF
 P 6150 3300
-F 0 "SW1" H 6050 3400 50  0000 C CNN
+F 0 "SW-F1" H 6050 3400 50  0000 C CNN
 F 1 "SW_SPDT" H 6150 3494 50  0000 C CNN
 F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 6150 3300 50  0001 C CNN
 F 3 "~" H 6150 3300 50  0001 C CNN
@@ -222,10 +210,10 @@ F 3 "~" H 6150 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_SPDT SW2
+L Switch:SW_SPDT SW-F2
 U 1 1 5D3CA2AB
 P 6150 4150
-F 0 "SW2" H 6050 4250 50  0000 C CNN
+F 0 "SW-F2" H 6050 4250 50  0000 C CNN
 F 1 "SW_SPDT" H 6150 4344 50  0000 C CNN
 F 2 "footprints:PinHeader_1x03_P2.54mm_Vertical" H 6150 4150 50  0001 C CNN
 F 3 "~" H 6150 4150 50  0001 C CNN
@@ -238,7 +226,7 @@ U 1 1 5D3AAAFE
 P 3600 4250
 F 0 "J-F2" H 3500 4100 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 3250 4200 50  0000 C CNN
-F 2 "footprints:FanPinHeader_1x04_P2.54mm_Vertical" H 3600 4250 50  0001 C CNN
+F 2 "footprints:0470531000" H 3600 4250 50  0001 C CNN
 F 3 "~" H 3600 4250 50  0001 C CNN
 	1    3600 4250
 	1    0    0    -1  
@@ -288,17 +276,6 @@ Wire Wire Line
 	6350 3850 6350 4050
 Wire Wire Line
 	6350 3200 6350 3000
-$Comp
-L Switch:SW_Push_Dual SW3
-U 1 1 5D47FE3D
-P 10150 2150
-F 0 "SW3" H 10150 2435 50  0000 C CNN
-F 1 "SW_Push" H 10150 2344 50  0000 C CNN
-F 2 "footprints:ESE-20C423" H 10150 2350 50  0001 C CNN
-F 3 "~" H 10150 2350 50  0001 C CNN
-	1    10150 2150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10700 2350 10700 3250
 Wire Wire Line
@@ -319,7 +296,7 @@ L power:PWR_FLAG #FLG0101
 U 1 1 5D4AC0F2
 P 7750 1800
 F 0 "#FLG0101" H 7750 1875 50  0001 C CNN
-F 1 "PWR_FLAG" H 7750 1973 50  0000 C CNN
+F 1 "PWR_FLAG" H 8000 1850 50  0000 C CNN
 F 2 "" H 7750 1800 50  0001 C CNN
 F 3 "~" H 7750 1800 50  0001 C CNN
 	1    7750 1800
@@ -344,8 +321,6 @@ Text Label 7550 2050 1    50   ~ 0
 12V
 Text Label 7750 2050 1    50   ~ 0
 GND
-NoConn ~ 10350 2150
-NoConn ~ 9950 2150
 Text Label 6350 3400 0    50   ~ 0
 F1-12V
 Text Label 6350 4250 0    50   ~ 0
@@ -406,7 +381,7 @@ L power:PWR_FLAG #FLG0103
 U 1 1 5D4B5915
 P 7550 1800
 F 0 "#FLG0103" H 7550 1875 50  0001 C CNN
-F 1 "PWR_FLAG" H 7550 1973 50  0000 C CNN
+F 1 "PWR_FLAG" H 7300 1850 50  0000 C CNN
 F 2 "" H 7550 1800 50  0001 C CNN
 F 3 "~" H 7550 1800 50  0001 C CNN
 	1    7550 1800
@@ -595,8 +570,6 @@ Wire Wire Line
 	3800 4250 4050 4250
 Wire Wire Line
 	4850 4250 3800 4350
-Wire Wire Line
-	9950 2350 9600 2350
 Connection ~ 9600 2350
 Wire Wire Line
 	9600 2350 9600 2450
@@ -692,6 +665,39 @@ Connection ~ 5900 4900
 Wire Wire Line
 	7000 4250 6900 4250
 Connection ~ 6900 4250
+$Comp
+L Connector:Conn_01x04_Female J-PWR1
+U 1 1 5D6997BE
+P 6700 1600
+F 0 "J-PWR1" V 6750 1700 50  0000 R CNN
+F 1 "Conn_01x04_Female" V 6850 1950 50  0000 R CNN
+F 2 "footprints:641737-1" H 6700 1600 50  0001 C CNN
+F 3 "~" H 6700 1600 50  0001 C CNN
+	1    6700 1600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 1800 6800 1800
+Connection ~ 6800 1800
+$Comp
+L Symbols:RESET_SWITCH SW1
+U 1 1 5D67B3A7
+P 10100 2200
+F 0 "SW1" H 10100 2425 50  0000 C CNN
+F 1 "RESET_SWITCH" H 10100 2334 50  0000 C CNN
+F 2 "footprints:PTS_647_SM38_SMTR2_LFS" H 10100 2200 50  0001 C CNN
+F 3 "" H 10100 2200 50  0001 C CNN
+	1    10100 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 2350 9600 2350
+Wire Wire Line
+	10350 2200 10350 2350
+Connection ~ 10350 2350
+Wire Wire Line
+	9850 2350 9850 2200
+Connection ~ 9850 2350
 Wire Wire Line
 	3800 6550 4250 6550
 Wire Wire Line

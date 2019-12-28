@@ -1,4 +1,5 @@
-(module 7101SD9CQE (layer F.Cu) (tedit 5D4F4AC8)
+(module 7101SD9CQE (layer F.Cu) (tedit 5D672557)
+  (descr "SPDT THT toggle switch")
   (fp_text reference REF** (at 0 3.81) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.25)))
   )

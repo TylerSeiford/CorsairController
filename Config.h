@@ -1,21 +1,21 @@
 #pragma once
 
 //ARGB setup
-constexpr uint8_t LEDS_PER_CHANNEL = 10;
+constexpr uint8_t LEDS_PER_CHANNEL = 20;
 	//Number of LEDs per ARGB channel
-#define LED_CHIPSET_1 TM1803
+#define LED_CHIPSET_1 WS2812B
 	//Chipset for ARGB1 header
-#define LED_ORDER_1 GBR
+#define LED_ORDER_1 GRB
 	//LED order for ARGB1 header
-#define LED_CHIPSET_2 TM1803
+#define LED_CHIPSET_2 WS2812B
 	//Chipset for ARGB2 header
-#define LED_ORDER_2 GBR
+#define LED_ORDER_2 GRB
 	//LED order for ARGB2 header
 
 
 //RGB setup
-#define GRB
-	//Order of RGB header, normally GRB or RGB
+#define GRB_
+	//Order of RGB header
 
 
 //Fan setup
@@ -28,33 +28,34 @@ constexpr uint8_t F2_MAX = 1500;
 
 
 
+
 // *** FANCY MAGICS FOR RGB SETUP ***
-#ifdef RGB
+#ifdef RGB_
 	#define RED_PIN RGB_1
 	#define GREEN_PIN RGB_2
 	#define BLUE_PIN RGB_3
 #endif
-#ifdef RBG
+#ifdef RBG_
 	#define RED_PIN RGB_1
 	#define GREEN_PIN RGB_3
 	#define BLUE_PIN RGB_2
 #endif
-#ifdef GRB
+#ifdef GRB_
 	#define RED_PIN RGB_2
 	#define GREEN_PIN RGB_1
 	#define BLUE_PIN RGB_3
 #endif
-#ifdef GBR
+#ifdef GBR_
 	#define RED_PIN RGB_3
 	#define GREEN_PIN RGB_1
 	#define BLUE_PIN RGB_2
 #endif
-#ifdef BGR
+#ifdef BGR_
 	#define RED_PIN RGB_3
 	#define GREEN_PIN RGB_2
 	#define BLUE_PIN RGB_1
 #endif
-#ifdef BRG
+#ifdef BRG_
 	#define RED_PIN RGB_2
 	#define GREEN_PIN RGB_3
 	#define BLUE_PIN RGB_1
